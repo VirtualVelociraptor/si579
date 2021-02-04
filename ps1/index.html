@@ -5,20 +5,57 @@
         <title>Web3D site for si579</title>
         <link rel="shortcut icon" type="image/png" href="img/vv_icon.png"/>
 		<style>
+            a:link{
+                color:teal
+            }
+            #logoimg{
+                left: 10px;
+                top: 50px;
+            }
 			body { margin: 0; }
 
-            #info{
-                position: absolute;
-                top: 10px;
+            .info{
+                position: absolute;               
                 width: 100%;
                 text-align: center;
                 z-index: 100;
                 display: block;
-                color: red;
+                color:ghostwhite;
+                font-size: xx-large;
+            }
+
+            #header{
+                top: 30px;
+            }
+
+            h1{
+                top: 150px;
+            }
+
+            h3{
+                font-size: large;
+            }
+
+            main{
+                top: 250px;
+            }
+
+            #resources{
+                bottom: 70px;
+            }
+
+            #footer{
+                bottom: 20px;
+                font-size: x-large;
             }
 		</style>
-	</head>
+    </head>
+    <header class="info" id="header"><span><img id="logoimg" src="img/vv_icon.png" alt="logo" width="100"></span>VirtualVelociraptor.com</header>
+
 	<body>
+        <h1 class="info">Hello 3D World! Welcome to my site.</h1>
+        <main class="info">This is the future home of my interactive, immersive, 3D portfolio website.</main>
+        
 		<script src="js/three.js"></script>
 		<script>
             // Our Javascript will go here.
@@ -29,7 +66,7 @@
             document.body.appendChild(renderer.domElement);
 
             const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
+            const material = new THREE.MeshBasicMaterial( {color: 0x990000} );
             const cube = new THREE.Mesh( geometry, material );
             scene.add(cube);
 
@@ -42,7 +79,24 @@
                 renderer.render(scene,camera);
             }
             animate();
-        </script>
-        <div id="info">Intro scene for THREE.js</div>
-	</body>
+        </script>        
+    </body>
+
+    <section>
+        <aside>           
+                <h3 class="info" id="resources">In the meantime, feel free to check out:
+                    <ol>
+                        <li>
+                            <a href="https://gutierrezchristian.github.io/portfolio/projects.html" target="_blank">my current website</a> or
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/christianfgutierrez" target="_blank">my LinkedIn</a> 
+                        </li>
+                    </ol>           
+                    to learn more about my work.
+                </h3>           
+        </aside> 
+    </section>
+
+    <footer class="info" id="footer">Copyright 2021&copy Christian Gutierrez</footer>
 </html>
