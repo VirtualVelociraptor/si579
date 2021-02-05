@@ -35,19 +35,19 @@ function largest(lst) {
  */
 
 function fact(n) {
-  let prev = 1;
-  let curr = n;
+  // let prev = 1;
+  // let curr = n;
 
-  for(let i = n; i <= n; i--){
-    if(curr == 0){ 
-      return 1; 
-    }
-    else{
-      curr = curr * prev;
-      prev = curr;
-    }    
-  }
-  return curr;
+  // for(let i = n; i <= n; i--){
+  //   if(curr == 0){ 
+  //     return 1; 
+  //   }
+  //   else{
+  //     curr = curr * prev;
+  //     prev = curr;
+  //   }    
+  // }
+  // return null;
 }
 
 /**
