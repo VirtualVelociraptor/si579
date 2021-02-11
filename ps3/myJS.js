@@ -2,27 +2,32 @@
 * Excercise 1
 *
 */
-
-
+const colorBlock = document.getElementById("color-block");
+const centerText = document.getElementById("center-text");
+const colorName = document.getElementById("color-name");
+let isPink = true;
 
 /*
 * Then write a function that changes the text and the color inside the div
 *
 */
+colorBlock.addEventListener("click", changeColor);
 
 function changeColor(){
     //Write a condition determine what color it should be changed to
-    if(){
+    if(isPink){
         //change the background color using JS
-
+        colorBlock.style.backgroundColor = "#00FFFF";
+        isPink = false;
         //Change the text of the color using the span id color-name
-
+        colorName.innerHTML = "#00FFFF";
     }
     else{
         //change the background color using JS
-
+        colorBlock.style.backgroundColor = "#F08080";
+        isPink = true;
         //Change the text of the color using the span id color-name
-
+        colorName.innerHTML = "#F08080";
 
     }
 }
