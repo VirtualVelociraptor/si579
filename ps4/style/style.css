@@ -1,0 +1,45 @@
+a:link{
+    color: #008080;
+}
+
+#logoimg{
+    left: 10px;
+    top: 50px;
+}
+
+body { 
+    font-family: 'Texturina', serif;
+    margin: 0; 
+}
+
+.info{
+    position: absolute;               
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display: block;
+    color:ghostwhite;
+    font-size: xx-large;
+}
+
+#header{
+    top: 20px;
+}
+
+h1{
+    top: 130px;
+}
+
+main{
+    top: 200px;
+}
+
+#resources{
+    bottom: 70px;
+    font-size: x-large;
+}
+
+#footer{
+    bottom: 20px;
+    font-size: large;
+}

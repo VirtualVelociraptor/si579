@@ -1,46 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="style.css">
+<html>
+	<head>
+		<meta charset="utf-8">
+        <title>Web3D site for si579</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <!--<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap-fire" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Texturina&effect=fire-animation|anaglyph|3d">
+        <link rel="shortcut icon" type="image/png" href="img/vv_icon.png"/>
+        <link rel="stylesheet" href="style/style.css"> 
 
-</head>
-<body>
+    </head>
+    <header class="info font-effect-fire-animation" id="header"><span><img id="logoimg" src="img/vv_icon.png" alt="logo" width="100"></span>VirtualVelociraptor.com</header>
 
-<h1>Excercise 1</h1>
-<p>Change the color of the div on mouse click.</p>
-<ol>
-    <li>Clicking the square once should change it to the color you like using only Javascript. </li>
-    <li>Change the color name on the div section to the current background color.</li>
-    <li>Clicking on the div a second time should change the background color back to the original color.</li>
-</ol>
+	<body>
+        <h1 class="info font-effect-3d">Hello 3D World! Welcome to my site.</h1>
+        <main class="info font-effect-anaglyph">This is the future home of my interactive, immersive, 3D portfolio website.</main>
+        
+		<script src="js/three.js"></script>
+		<script>
+            // Our Javascript will go here.
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
 
-<div id = "color-block">
-    <p id="center-text">The color is: <span id = "color-name">#F08080</span> </p>
-</div>
+            const geometry = new THREE.BoxGeometry();
+            const material = new THREE.MeshBasicMaterial( {color: 0x990000} );
+            const cube = new THREE.Mesh( geometry, material );
+            scene.add(cube);
 
-<br>
-<h1>Excercise 2</h1>
-<p>Convert the temperature from Fahrenheit to Celsius when the submit button is clicked. The excercise should be able to:</p>
-<ol>
-    <li>Read the input of Fahrenheit from the user. </li>
-    <li>Convert Fahrenheit to Celsius using Javascript. </li>
-    <li>When button is clicked, the result should show up behind the word Celsius:</li>
-</ol>
-    <br>
-    *To convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by 5/9.<br>
+            camera.position.z = 5;
 
+            function animate(){
+                requestAnimationFrame(animate);
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+                renderer.render(scene,camera);
+            }
+            animate();
+        </script>        
+    </body>
 
-<input type="number" id="f-input" name="f-input" placeholder="Fahrenheit degree &#8457">
-<input type="submit" value="convert" id = "convertbtn">
+    <section>
+        <aside>           
+                <h3 class="info" id="resources">In the meantime, feel free to check out:
+                    <ol >
+                        <li>
+                            <a href="https://www.christiangutierrez.xyz/projects.html" target="_blank">my current website</a> or
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/christianfgutierrez" target="_blank">my LinkedIn</a> 
+                        </li>
+                    </ol>           
+                </h3>           
+        </aside> 
+    </section>
 
-<p>Celsius: <span id = "c-output"></span> &#8451</p>
-
-
-
-
-<script src = "myJS.js"></script>
-
-</body>
+    <footer class="info" id="footer">Copyright 2021&copy Christian Gutierrez<br><a href="ps2-tests.html" target="_blank">Part 2 Tests</a></footer>
 </html>
