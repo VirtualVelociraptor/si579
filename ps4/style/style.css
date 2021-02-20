@@ -116,14 +116,14 @@ margin-top: 100px;
   padding-bottom: 0px;
 }
 
-#about-me-desc p, {
+#about-me-desc p {
   font-size: 1.4em;
   margin-bottom: 0px;
 }
 
 #resume-link{
   /*text-decoration: none;*/
-  color: teal
+  color: teal;
 }
 
 .company-container {
