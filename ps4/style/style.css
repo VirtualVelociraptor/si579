@@ -80,7 +80,7 @@ margin-bottom: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 
-#polaroid-text{
+.polaroid-text{
   display: flex;
   flex-flow: row wrap-reverse;
   justify-content: flex-end;
@@ -91,13 +91,50 @@ margin-bottom: 50px;
   font-family: 'Rock Salt', cursive;
 }
 
-#cfg-pic-wrapper{ 
+.cfg-pic-wrapper{ 
 }
 
-#cfg-pic{
-    width: 100%;
-    max-height: 500px
+.cfg-pic{
+    max-width: 98%;
+    max-height: 500px;
+    margin: auto;
   }
+
+  .card_front,
+  .card_back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card_front {
+    height: 100%;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+  }
+  
+  .card_back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 10px;
+    color: #20263f;
+  }
+
+  .card_single {
+    -webkit-transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .card_single.flip {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+  }
+  
+     
 
 #about-me-desc{
   width: 50%;
