@@ -14,10 +14,39 @@
         <link rel="stylesheet" href="style/style.css"> 
 
     </head>
-    <header class="info font-effect-fire-animation" id="header"><span><img id="logoimg" src="img/vv_icon.png" alt="logo" width="100"></span>VirtualVelociraptor.com</header>
+    
 
-	<body> 
+	<body>
+        <!--------------------------SECTION: threeJS cube ----------------------------------->
+        <section id="cube-3js">      
+            <script src="js/three.js"></script>
+            <script>
+                // Our Javascript will go here.
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                const renderer = new THREE.WebGLRenderer();
+                renderer.setSize(window.innerWidth/2, window.innerHeight/2);
+                document.body.appendChild(renderer.domElement);
+
+                const geometry = new THREE.BoxGeometry();
+                const material = new THREE.MeshBasicMaterial( {color: 0x990000} );
+                const cube = new THREE.Mesh( geometry, material );
+                scene.add(cube);
+
+                camera.position.z = 2;
+
+                function animate(){
+                    requestAnimationFrame(animate);
+                    cube.rotation.x += 0.01;
+                    cube.rotation.y += 0.01;
+                    renderer.render(scene,camera);
+                }
+                animate();
+            </script>   
+        </section> 
+        
         <div>
+            <div class="info font-effect-fire-animation" id="site-name"><span><img id="logoimg" src="img/vv_icon.png" alt="logo" width="100"></span>VirtualVelociraptor.com</div>
             <h1 class="info font-effect-3d">Hello 3D World! Welcome to my site.</h1>
             <h2 class="info font-effect-anaglyph">This is the home of my interactive, immersive, 3D portfolio website.</h2>            
         </div>      
@@ -56,47 +85,8 @@
             <div class="box f"><img id="ccas-logo" class="comp-logo" src="images/CCAS_Logo.png" alt="CCAS Logo"></div>
             </div>
         </main>
-                 
-		<script src="js/three.js"></script>
-		<script>
-            // Our Javascript will go here.
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            const renderer = new THREE.WebGLRenderer();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            document.body.appendChild(renderer.domElement);
-
-            const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial( {color: 0x990000} );
-            const cube = new THREE.Mesh( geometry, material );
-            scene.add(cube);
-
-            camera.position.z = 5;
-
-            function animate(){
-                requestAnimationFrame(animate);
-                cube.rotation.x += 0.01;
-                cube.rotation.y += 0.01;
-                renderer.render(scene,camera);
-            }
-            animate();
-        </script>        
+        <script src="js/about.js"></script>     
     </body>
 
-    <section>
-        <aside>           
-                <h3 class="info" id="resources">In the meantime, feel free to check out:
-                    <ol >
-                        <li>
-                            <a href="https://www.christiangutierrez.xyz/projects.html" target="_blank">my current website</a> or
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/christianfgutierrez" target="_blank">my LinkedIn</a> 
-                        </li>
-                    </ol>           
-                </h3>           
-        </aside> 
-    </section>
-
-    <footer class="info" id="footer">Copyright 2021&copy Christian Gutierrez</footer>
+    <footer>Copyright 2021&copy Christian Gutierrez</footer>
 </html>
