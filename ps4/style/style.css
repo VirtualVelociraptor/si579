@@ -49,19 +49,18 @@ margin-right: auto;
 color:ghostwhite;
 font-size: xx-large;
 margin-top: 100px;
+margin-bottom: 50px;
 }
 
 /*------------------------ SECTION: ABOUT ME --------------------------*/
 #about-me{
   height: 100%;
   width: 100%;
-  background-color:  ; 
   display: flex;  
   flex-flow: row nowrap;
   align-items:center;
   justify-content: space-around;
   position: relative;
-  /*background-image: url("https://previews.dropbox.com/p/thumb/AAbhUsEniDv3yBjSu9HUTQ5zQIPzpBAnd_FsfgEL9DiJ_HwXN7hHPNa3DvsdGGpIEQKhepUM-PhPL-oHjHKZPA6gCAqxKkUCQ7csTVgG6vWqHkaYoCMWKAlWetKB75XI56vrKY8d0yYLGMvW_2m7wXqPVJ96GocMHXcIQyPiBlh7zKW8aq0gPhWbgzf3881ZR0RT3N5eeYzN6dOnjvJ45ED3zY-OEzw2k1pOKDBJ9mhl1Yyg1MU2AHadkkqCNgJmtCSf4QnIEtXON062dXjdD3gBY6TLVSU4ugUf7uDg50BvmxWtjZKuSqkghGCwqi1So1SGMlun0rUgvgqNeKC7bZZO1XNkV6XS8hlu0hs8zsJr6qKLbR0ekYAj9sZGhaZatEp4cDlPY9aPsA-_CF7d5K8i/p.jpeg?fv_content=true&size_mode=5");*/
   background-image: url("/images/about-me-wallpaper.jpg");
   background-attachment: fixed;
   /*min-height: 500px; TEST*/
@@ -102,11 +101,11 @@ margin-top: 100px;
 
 #about-me-desc{
   width: 50%;
-  background: whitesmoke;
+  background: rgba(245, 245, 245, 0.8);
   display: flex;
   flex-flow: column nowrap;
   color: black;
-  padding: 80px 20px 20px 20px;
+  padding: 40px 20px 20px 20px;
   margin: 20px; 
 }
 
