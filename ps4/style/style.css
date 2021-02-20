@@ -10,10 +10,10 @@ a:link{
 body { 
     font-family: 'Texturina', serif;
     margin: 0; 
+    background-color: black;
 }
 
-.info{
-    position: absolute;               
+.info{                  
     width: 100%;
     text-align: center;
     z-index: 100;
@@ -30,7 +30,7 @@ h1{
     top: 130px;
 }
 
-main{
+h2{
     top: 200px;
 }
 
@@ -43,3 +43,113 @@ main{
     bottom: 20px;
     font-size: large;
 }
+
+/*------------------------ SECTION: ABOUT ME --------------------------*/
+#about-me{
+    height: 100%;
+    width: 100%;
+    background-color:  ; 
+    display: flex;  
+    flex-flow: row nowrap;
+    align-items:center;
+    justify-content: space-around;
+    position: relative;
+    /*background-image: url("https://previews.dropbox.com/p/thumb/AAbhUsEniDv3yBjSu9HUTQ5zQIPzpBAnd_FsfgEL9DiJ_HwXN7hHPNa3DvsdGGpIEQKhepUM-PhPL-oHjHKZPA6gCAqxKkUCQ7csTVgG6vWqHkaYoCMWKAlWetKB75XI56vrKY8d0yYLGMvW_2m7wXqPVJ96GocMHXcIQyPiBlh7zKW8aq0gPhWbgzf3881ZR0RT3N5eeYzN6dOnjvJ45ED3zY-OEzw2k1pOKDBJ9mhl1Yyg1MU2AHadkkqCNgJmtCSf4QnIEtXON062dXjdD3gBY6TLVSU4ugUf7uDg50BvmxWtjZKuSqkghGCwqi1So1SGMlun0rUgvgqNeKC7bZZO1XNkV6XS8hlu0hs8zsJr6qKLbR0ekYAj9sZGhaZatEp4cDlPY9aPsA-_CF7d5K8i/p.jpeg?fv_content=true&size_mode=5");*/
+    background-image: url("/images/about-me-wallpaper.jpg");
+    background-attachment: fixed;
+    /*min-height: 500px; TEST*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+  }
+  
+  #polaroid-container{
+    max-width: 500px;
+     width: 50%; 
+    padding: 5px 5px 5px 5px;
+    margin: 20px;
+    margin-top: 100px;
+    background: #fafafa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+  }
+  
+  #polaroid-text{
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    background: #fafafa;
+    height: 50px;
+    font-size: 15px;;
+    font-family: 'Rock Salt', cursive;
+  }
+  
+  #cfg-pic-wrapper{ 
+  }
+  
+  #cfg-pic{
+      width: 100%;
+      max-height: 500px
+    }
+  
+  #about-me-desc{
+    width: 50%;
+    background: whitesmoke;
+    display: flex;
+    flex-flow: column nowrap;
+    color: black;
+    padding: 80px 20px 20px 20px;
+    margin: 20px; 
+  }
+  
+  #about-me-desc h2{
+    font-size: 40px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  
+  #about-me-desc p, {
+    font-size: 1.4em;
+    margin-bottom: 0px;
+  }
+  
+  #resume-link{
+    /*text-decoration: none;*/
+    color: black;
+  }
+  
+  .company-container {
+    width: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+    background-color:black;
+    color: #444;
+  }
+  
+  .box {
+    background-color:white;
+    color: #fff;
+    border-radius: 0px;
+    padding: 20px;
+    font-size: 150%;
+  }
+  
+  .comp-logo{
+    width: 100%;
+    display: block;
+    margin: auto;
+
+  }
+  
+  .interest{
+    background-color: black;
+    color: black;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }

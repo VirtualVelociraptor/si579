@@ -6,16 +6,57 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <!--<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap-fire" rel="stylesheet"> -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Texturina&effect=fire-animation|anaglyph|3d">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
         <link rel="shortcut icon" type="image/png" href="img/vv_icon.png"/>
         <link rel="stylesheet" href="style/style.css"> 
 
     </head>
     <header class="info font-effect-fire-animation" id="header"><span><img id="logoimg" src="img/vv_icon.png" alt="logo" width="100"></span>VirtualVelociraptor.com</header>
 
-	<body>
-        <h1 class="info font-effect-3d">Hello 3D World! Welcome to my site.</h1>
-        <main class="info font-effect-anaglyph">This is the future home of my interactive, immersive, 3D portfolio website.</main>
-        
+	<body> 
+        <div>
+            <h1 class="info font-effect-3d">Hello 3D World! Welcome to my site.</h1>
+            <h2 class="info font-effect-anaglyph">This is the future home of my interactive, immersive, 3D portfolio website.</h2>            
+        </div>      
+
+
+        <main id="main-section">
+            <!---------------------------------- ABOUT  -------------------->
+            <div id="about-me">
+            <div id="about-me-desc">
+                <h1>Hi, I'm Christian</h1>
+                <p>I'm a VR/AR and Web Front-End Developer & UX|UI Designer. I'm very passionate about the user experience and intuitive fluid interactions when it comes to people navigating websites and 3D virtual environments. I'm highly motivated, creative, friendly, and resourceful. I'm a graduate from the University of California, San Diego. I studied Cognitive Science (specializing in Neural Computation) and Computer Science (focusing on Virtual Reality). </p>
+
+                <p>I have experience with front-end responsive web development (HTML, CSS, JavaScript). I also have a strong passion and interest for virtual reality and augmented reality technologies (Unity and C#). I possess experience in both small startup companies
+                and large corporate environments. Notable past employers include NASA Jet Propulsion Laboratory and Intel, where I worked as a front-end software developer. </p>
+                
+                <p>On a personal note, I also love bicycling and world travel! I've embarked on backpacking trips around South America, Asia, Europe, and I recently returned from a life-changing 6 month trip through Africa. I enjoy interacting with people of all backgrounds and learning about new cultures and how different people see the world. I like chatting about travel, philosophy, and technology.</p>
+                
+                <p>Feel free to <a href="/CFG_Resume.pdf" target="_blank" id="resume-link">check out my resume</a> for more info. Below are a list of companies that I have done software development work for.</p>
+            </div>
+            <div id="polaroid-container">
+                <div id="cfg-pic-wrapper">
+                <!--<img id="cfg-pic" src="https://previews.dropbox.com/p/thumb/AAb4iVGmY_x6bdniuPJkD7AQ_XpmdyJL2vZ0EFo7srXnINtzjuqX9H_voQym3jaDsYeOyrfVV4xqvjglvRMdhaN-tbjstKHMLL6ej8-nUE6EYKt7UL-CEZWYojK-VHsR8_2bMFgWMjXtLnc3kdbuLHPmeP1vF4PlU6yOsY82-CNoDIui6T46mYhh_C4HlYzsdOWLGUkHGelBjeBQ3Z-9JZjlroyNmrf4Gh3simGTRy0k25oXIPbZF008Of2sMdpAmbyn_NtHyCEIFUv9PFMs_wnTk9x97MRmm1MEooWMwfQjfseGrFOif4KpH3LTmh6lu3bQ7U-pO_0wR6WRP89RFIMq/p.jpeg?fv_content=true&size_mode=5">-->
+                <img id="cfg-pic" src="images/CFG_table_mountain.jpg" alt="Me at Cape Town">
+                </div>
+                <div id="polaroid-text">Table Mountain @ Cape Town, South Africa</div>
+            </div>
+            </div>
+
+            <!--------------------------SECTION: Companies ----------------------------------->
+            <div class="company-container">
+            <div class="box a"><img id="adobe-logo" class="comp-logo" src="images/Adobe_Logo.png" alt="Adobe Logo"></div>
+            <div class="box b"><img id="qualcomm-logo" class="comp-logo" src="images/Qualcomm_Logo_Small.png" alt="Qualcomm Logo"></div>
+            <div class="box c"><img id="intel-logo" class="comp-logo" src="images/Intel_Logo_Small.png" alt="Intel Logo"></div>
+            <div class="box d"><img id="nasajpl-logo" class="comp-logo" src="images/NASAJPL_Logo_Small.png" alt="NASAJPL Logo"></div>
+            <div class="box e"><img id="nanome-logo" class="comp-logo" src="images/Nanome_Logo_Small.png" alt="Nanome Logo"></div>
+            <div class="box f"><img id="ccas-logo" class="comp-logo" src="images/CCAS_Logo.png" alt="CCAS Logo"></div>
+            </div>
+        </main>
+                 
 		<script src="js/three.js"></script>
 		<script>
             // Our Javascript will go here.
@@ -57,5 +98,5 @@
         </aside> 
     </section>
 
-    <footer class="info" id="footer">Copyright 2021&copy Christian Gutierrez<br><a href="ps2-tests.html" target="_blank">Part 2 Tests</a></footer>
+    <footer class="info" id="footer">Copyright 2021&copy Christian Gutierrez</footer>
 </html>
