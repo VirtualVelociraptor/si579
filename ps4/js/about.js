@@ -12,12 +12,13 @@ function flipCard() {
 
   this.classList.toggle("flip");
   if(firstFlip){
-    let tablmnt = document.createElement("h2");
+    let tablmnt = document.createElement("h3");
     let node = document.createTextNode("Front view of Table Mountain");
-    tablmnt.appendChild(node);
-  
+    tablmnt.appendChild(node);  
     let element = document.getElementById("back-of-card");
     element.appendChild(tablmnt);
+
+
     firstFlip = false;
   }
 
