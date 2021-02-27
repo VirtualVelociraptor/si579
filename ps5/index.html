@@ -136,12 +136,14 @@
             </div>  
                       
         <!-------------------------- A-FRAME EXTERNAL API ---------------------> 
-        <h3>
-            FEATURED PROJECT: VR Workout Coach
-        </h3>   
+        <h3>FEATURED PROJECT: VR Workout Coach</h3>   
             <!----------------------------------- FEATURED PROJECT -------------------------------------------->
-            <div id="vrCoachAframeScene">
-                <a-scene environment="preset: tron; shadow: true" physics embedded>
+            <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+            <style>
+              #aFrameScene { width: 800px; height: 400px;}
+            </style>
+            <div id="aFrameScene">
+                <a-scene environment="preset: tron; shadow: true" physics embedded="">
       
                     <!-- SOURCE: SUPER HANDS -->  
                     <script>
