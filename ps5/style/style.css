@@ -52,6 +52,11 @@ margin-top: 100px;
 margin-bottom: 50px;
 }
 
+a-scene {
+  height: 600px;
+  width: 1200px;
+}
+
 /*------------------------ SECTION: ABOUT ME --------------------------*/
 #about-me{
   height: 100%;
