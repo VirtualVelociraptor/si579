@@ -1,0 +1,210 @@
+a:link{
+  color: #008080;
+}
+
+#logoimg{
+  left: 10px;
+  top: 50px;
+}
+
+body { 
+  font-family: 'Texturina', serif;
+  margin: 0; 
+  background-color: black;
+}
+
+.info{  
+display: block;
+width: 90%;
+text-align:end;
+position: absolute;  
+z-index: 100;
+color:ghostwhite;
+font-size: xx-large;
+}
+
+#site-name{
+  top: 20px;
+}
+
+h1{
+  top: 130px;
+}
+
+h2{
+  top: 200px;
+}
+
+#resources{
+  bottom: 70px;
+  font-size: x-large;
+}
+
+.lower-info{
+display: block;
+width: 100%;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+color:ghostwhite;
+font-size: xx-large;
+margin-top: 100px;
+margin-bottom: 50px;
+}
+
+/*------------------------ SECTION: ABOUT ME --------------------------*/
+#about-me{
+  height: 100%;
+  width: 100%;
+  display: flex;  
+  flex-flow: row nowrap;
+  align-items:center;
+  justify-content: space-around;
+  position: relative;
+  background-image: url("/images/about-me-wallpaper.jpg");
+  background-attachment: fixed;
+  /*min-height: 500px; TEST*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50px;
+}
+
+#polaroid-container{
+  max-width: 500px;
+   width: 50%; 
+  padding: 5px 5px 5px 5px;
+  margin: 20px;
+  margin-top: 100px;
+  background: #fafafa;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.polaroid-text-front{
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fafafa;
+  height: 50px;
+  font-size: 15px;;
+  font-family: 'Rock Salt', cursive;
+}
+
+.cfg-pic-wrapper{ 
+}
+
+.cfg-pic{
+    max-width: 98%;
+    max-height: 500px;
+    margin: auto;
+  }
+
+  .card_front,
+  .card_back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card_front {
+    height: 100%;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+  }
+  
+  .card_back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 10px;
+    color: whitesmoke;
+  }
+
+  .card_single {
+    -webkit-transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .card_single.flip {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+  }
+
+  .comp_card_single {
+    -webkit-transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .comp_card_single.flip {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+  }
+  
+     
+
+#about-me-desc{
+  width: 50%;
+  background: rgba(245, 245, 245, 0.8);
+  display: flex;
+  flex-flow: column nowrap;
+  color: black;
+  padding: 40px 20px 20px 20px;
+  margin: 20px; 
+}
+
+#about-me-desc h2{
+  font-size: 40px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#about-me-desc p {
+  font-size: 1.4em;
+  margin-bottom: 0px;
+}
+
+#resume-link{
+  /*text-decoration: none;*/
+  color: teal;
+}
+
+#company-container {
+  width: auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+  background-color:black;
+  color: whitesmoke;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  background-color:white;
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.comp-logo{
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.interest{
+  background-color: black;
+  color: black;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
