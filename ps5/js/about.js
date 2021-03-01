@@ -1,5 +1,6 @@
 ////////BELOW ARE THE 3rd PARTY JS LIBRARIES THAT I USED. THEY ARE REFERENCED IN MY HTML FILE ////////////
 
+//<script src="https://kit.fontawesome.com/28511594f3.js" crossorigin="anonymous"></script>
 // <script src="js/play-on-click.js"></script>
 // <script src="js/controller-menu.js"></script>
 // <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
