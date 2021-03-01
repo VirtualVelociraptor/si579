@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-        <title>WebXR portfolio site for Christian Gutierrez</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <!--<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap-fire" rel="stylesheet"> -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Texturina&effect=fire-animation|anaglyph|3d">
-        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
-        <link rel="shortcut icon" type="image/png" href="img/vv_icon.png"/>
-        <link rel="stylesheet" href="style/style.css"> 
+  <head>
+    <meta charset="utf-8" />
+    <title>WebXR portfolio site for Christian Gutierrez</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!--<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap-fire" rel="stylesheet"> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Texturina&effect=fire-animation|anaglyph|3d"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Titillium+Web"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rock+Salt"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="img/vv_icon.png" />
+    <link rel="stylesheet" href="style/style.css" />
 
-        <!--FONT AWESOME-->
-        <script src="https://kit.fontawesome.com/28511594f3.js" crossorigin="anonymous"></script>
+    <!--FONT AWESOME-->
+    <script
+      src="https://kit.fontawesome.com/28511594f3.js"
+      crossorigin="anonymous"
+    ></script>
 
-        <!---------3rd Party JS Libraries (added within <main> tags)---------->
-        <!--<script src="js/play-on-click.js"></script>
+    <!---------3rd Party JS Libraries (added within <main> tags)---------->
+    <!--<script src="js/play-on-click.js"></script>
         <script src="js/controller-menu.js"></script>
         <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
@@ -34,425 +52,1004 @@
         <script src="//unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
         <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
         <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>-->
-    </head>
-    
+  </head>
 
-	<body>
-        <!--------------------------SECTION: external THREE.js library ----------------------------------->
-        <section id="cube-3js">      
-            <script src="js/three.js"></script>
-            <script>
-                // Our Javascript will go here.
-                const scene = new THREE.Scene();
-                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                const renderer = new THREE.WebGLRenderer();
-                renderer.setSize(window.innerWidth/2, window.innerHeight/2);
-                document.body.appendChild(renderer.domElement);
+  <body>
+    <!--------------------------SECTION: external THREE.js library ----------------------------------->
+    <section id="cube-3js">
+      <script src="js/three.js"></script>
+      <script>
+        // Our Javascript will go here.
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(
+          75,
+          window.innerWidth / window.innerHeight,
+          0.1,
+          1000
+        );
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+        document.body.appendChild(renderer.domElement);
 
-                const geometry = new THREE.BoxGeometry();
-                const material = new THREE.MeshBasicMaterial( {color: 0x990000} );
-                const cube = new THREE.Mesh( geometry, material );
-                scene.add(cube);
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial({ color: 0x990000 });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
 
-                camera.position.z = 2;
+        camera.position.z = 2;
 
-                function animate(){
-                    requestAnimationFrame(animate);
-                    cube.rotation.x += 0.01;
-                    cube.rotation.y += 0.01;
-                    renderer.render(scene,camera);
-                }
-                animate();
-            </script>   
-        </section> 
-        
-        <div>
-            <div class="info font-effect-fire-animation" id="site-name"><span><img id="logoimg" src="img/vv_icon.png" alt="logo" width="100"></span>VirtualVelociraptor.com</div>
-            <h1 class="info font-effect-3d">Hello 3D World! Welcome to my site.</h1>
-            <h2 class="info font-effect-anaglyph">This is the home of my interactive, immersive, 3D portfolio website.</h2>            
-        </div>      
+        function animate() {
+          requestAnimationFrame(animate);
+          cube.rotation.x += 0.01;
+          cube.rotation.y += 0.01;
+          renderer.render(scene, camera);
+        }
+        animate();
+      </script>
+    </section>
 
+    <div>
+      <div class="info font-effect-fire-animation" id="site-name">
+        <span
+          ><img
+            id="logoimg"
+            src="img/vv_icon.png"
+            alt="logo"
+            width="100" /></span
+        >VirtualVelociraptor.com
+      </div>
+      <h1 class="info font-effect-3d">Hello 3D World! Welcome to my site.</h1>
+      <h2 class="info font-effect-anaglyph">
+        This is the home of my interactive, immersive, 3D portfolio website.
+      </h2>
+    </div>
 
-        <main id="main-section">
-            <!---------------------------------- ABOUT  -------------------->
-            <div id="about-me">
-                <div id="about-me-desc">
-                    <h1>Hi, I'm Christian</h1>
-                    <p>I'm a Front-End Developer for VR/AR and WebXR technologies. I'm a graduate from the University of California, San Diego where I studied Computational Cognitive Science and Computer Science (focusing on Virtual Reality). </p>
+    <main id="main-section">
+      <!---------------------------------- ABOUT  -------------------->
+      <div id="about-me">
+        <div id="about-me-desc">
+          <h1>Hi, I'm Christian</h1>
+          <p>
+            I'm a Front-End Developer for VR/AR and WebXR technologies. I'm a
+            graduate from the University of California, San Diego where I
+            studied Computational Cognitive Science and Computer Science
+            (focusing on Virtual Reality).
+          </p>
 
-                    <p>I have a strong passion and interest for virtual reality and augmented reality technologies. I have experience with native development in Unity and WebXR development with A-Frame. I have worked in various front-end devleopment roles in both small startup companies
-                    as well as large corporate environments. Notable past employers include Adobe, NASA Jet Propulsion Laboratory, Qualcomm and Intel. </p>
-                    
-                    <p>On a personal note, I also love bicycling and world travel! I've embarked on backpacking trips around South America, Asia, Europe, and most recently returned from a 6 month adventure through Africa. I enjoy interacting with people of all backgrounds and learning about new cultures and how different people see the world.</p>                                      
-                </div>
-                <div id="polaroid-container" class="card_single">
-                    <div class="cfg-pic-wrapper card_front">
-                        <img class="cfg-pic card_image" src="images/CFG_table_mountain.jpg" alt="Me at Cape Town">
-                        <div class="polaroid-text-front">Table Mountain @ Cape Town, South Africa</div>
-                    </div>
-                    <div id="back-of-card" class="cfg-pic-wrapper card_back">
-                        <img class="cfg-pic card_image" src="images/table_mountain_back.jpg" alt="Table Mountain">
-                        <div class="polaroid-text">Front view of Table Mountain</div>
-                    </div>
-                </div>
+          <p>
+            I have a strong passion and interest for virtual reality and
+            augmented reality technologies. I have experience with native
+            development in Unity and WebXR development with A-Frame. I have
+            worked in various front-end devleopment roles in both small startup
+            companies as well as large corporate environments. Notable past
+            employers include Adobe, NASA Jet Propulsion Laboratory, Qualcomm
+            and Intel.
+          </p>
+
+          <p>
+            On a personal note, I also love bicycling and world travel! I've
+            embarked on backpacking trips around South America, Asia, Europe,
+            and most recently returned from a 6 month adventure through Africa.
+            I enjoy interacting with people of all backgrounds and learning
+            about new cultures and how different people see the world.
+          </p>
+        </div>
+        <div id="polaroid-container" class="card_single">
+          <div class="cfg-pic-wrapper card_front">
+            <img
+              class="cfg-pic card_image"
+              src="images/CFG_table_mountain.jpg"
+              alt="Me at Cape Town"
+            />
+            <div class="polaroid-text-front">
+              Table Mountain @ Cape Town, South Africa
             </div>
+          </div>
+          <div id="back-of-card" class="cfg-pic-wrapper card_back">
+            <img
+              class="cfg-pic card_image"
+              src="images/table_mountain_back.jpg"
+              alt="Table Mountain"
+            />
+            <div class="polaroid-text">Front view of Table Mountain</div>
+          </div>
+        </div>
+      </div>
 
-        <!-------------------------- A-FRAME EXTERNAL API ---------------------> 
-          <h3 class="lower-info">
-            Immersive gallery featuring some of my XR Projects<br>
-            On desktop: Use the WASD keys to move and the mouse to look around.<br>
-            (Best experienced with a VR headset)
-          </h3>
-   
-            <!----------------------------------- FEATURED PROJECT -------------------------------------------->
-            <!---------3rd Party JS Libraries---------->
-            <script src="js/play-on-click.js"></script>
-            <script src="js/controller-menu.js"></script>
-            <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-            <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
-            <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
-                
-            <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.1.2/dist/aframe-physics-system.min.js"></script>
-            <script src="https://unpkg.com/aframe-physics-extras/dist/aframe-physics-extras.min.js"></script>
-            <script src="https://unpkg.com/aframe-event-set-component@4.0.1/dist/aframe-event-set-component.min.js"></script>
-            <script src="https://unpkg.com/aframe-layout-component/dist/aframe-layout-component.min.js"></script>
-            <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
-            <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
-            <script src="https://unpkg.com/aframe-controller-cursor-component@0.2.7/dist/aframe-controller-cursor-component.min.js"></script> 
-            
-            <script src="//unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-            <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
-            <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>                          
+      <!-------------------------- A-FRAME EXTERNAL API --------------------->
+      <h3 class="lower-info">
+        Immersive gallery featuring some of my XR Projects<br />
+        On desktop: Use the WASD keys to move and the mouse to look around.<br />
+        (Best experienced with a VR headset)
+      </h3>
 
-            <style>
-              #aFrameScene { width: 1200px; height: 600px; margin-left: auto; margin-right: auto;}
-            </style>
-            <div id="aFrameScene"><!-- REMEMBER TO ADD 'embedded' KEYWORD TO A-SCENE TAG-->
-              
-              <a-scene environment="preset: tron; shadow: true" physics embedded>
-      
-                <!-- SOURCE: SUPER HANDS -->  
-                <script>
-                  // turn controller's physics presence on only while button held down
-                  AFRAME.registerComponent("phase-shift", {
-                    init: function() {
-                      console.warn("installing phase shift");
-                      var el = this.el;
-                      el.addEventListener("gripdown", function() {
-                        el.setAttribute("collision-filter", {
-                          collisionForces: true
-                        });
-                      });
-                      el.addEventListener("gripup", function() {
-                        el.setAttribute("collision-filter", {
-                          collisionForces: false
-                        });
-                      });
-                    }
+      <!----------------------------------- FEATURED PROJECT -------------------------------------------->
+      <!---------3rd Party JS Libraries---------->
+      <script src="js/play-on-click.js"></script>
+      <script src="js/controller-menu.js"></script>
+      <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+      <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+      <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+
+      <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.1.2/dist/aframe-physics-system.min.js"></script>
+      <script src="https://unpkg.com/aframe-physics-extras/dist/aframe-physics-extras.min.js"></script>
+      <script src="https://unpkg.com/aframe-event-set-component@4.0.1/dist/aframe-event-set-component.min.js"></script>
+      <script src="https://unpkg.com/aframe-layout-component/dist/aframe-layout-component.min.js"></script>
+      <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
+      <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+      <script src="https://unpkg.com/aframe-controller-cursor-component@0.2.7/dist/aframe-controller-cursor-component.min.js"></script>
+
+      <script src="//unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+      <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
+      <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+
+      <style>
+        #aFrameScene {
+          width: 1200px;
+          height: 600px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      </style>
+      <div id="aFrameScene">
+        <!-- REMEMBER TO ADD 'embedded' KEYWORD TO A-SCENE TAG-->
+
+        <a-scene environment="preset: tron; shadow: true" physics embedded>
+          <!-- SOURCE: SUPER HANDS -->
+          <script>
+            // turn controller's physics presence on only while button held down
+            AFRAME.registerComponent("phase-shift", {
+              init: function () {
+                console.warn("installing phase shift");
+                var el = this.el;
+                el.addEventListener("gripdown", function () {
+                  el.setAttribute("collision-filter", {
+                    collisionForces: true,
                   });
-                </script>
-            
-               <script>
-                   // Component to change to a sequential color on click.
-                    AFRAME.registerComponent('cursor-listener', {
-                      init: function () {
-                        var lastIndex = -1;
-                        var COLORS = ['red', 'green', 'blue', 'white'];
-                        this.el.addEventListener('fusing', function (evt) {
-                          lastIndex = (lastIndex + 1) % COLORS.length;
-                          this.setAttribute('material', 'color', COLORS[lastIndex]);
-                          console.log('I was clicked at: ', evt.detail.intersection.point);
-                        });
-                      }
-                    });
-                </script>
-                        
-                  <!--PROJECT ASSETS-->
-                  <a-assets>
-                    
-                    <!-- SOUNDS -->
-                    <audio id="teleport-sound" src="//cdn.rawgit.com/michaelnebeling/src/master/button-4.mp3" crossorigin="anonymous"></audio>
-                    <!--Blade Runner Ambient Effect Source: https://freesound.org/people/onderwish/sounds/416070/-->
-                    <audio id="future-ambient" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Fblade_runner_ambient.mp3?v=1614323183996" crossorigin="anonymous"></audio>
-                    
-                    <!-- VIDEOS -->
-                    <video id="bpe-video" preload="auto" loop="false" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FVirtual%20Personal%20Trainer.mp4?v=1614383717586" crossorigin="anonymous" muted></video>
-                    <video id="hike-video" preload="auto" loop="false" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FAR%20Glasses%20Assistant%20for%20Nature%20Exploration.mp4?v=1614442333005" crossorigin="anonymous" muted></video>
-                    <video id="dbz-video" preload="auto" autoplay loop="false" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FDragon%20Ball%20XYZ%20short.mp4?v=1614444427535" crossorigin="anonymous" muted></video>
-                    <video id="sleep-video" preload="auto" autoplay loop="false" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FSleep%20Hygiene%20VR.mp4?v=1614445809369" crossorigin="anonymous" muted></video>
-                    
-                    
-                    <!--3D MODELS-->
-                    <a-gltf-model id="orb" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Fbladerunnerorb.glb?v=1614318070995" shader="flat"></a-gltf-model>     
-                    <a-gltf-model id="archway" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Ftron_entrance.glb?v=1614390672951"></a-gltf-model>
-                    <a-gltf-model id="cycle" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Ftron_cycle.glb?v=1614390713220" shader="flat"></a-gltf-model>
-                    
-                    <!-- TEXTURES -->
-                    <img id="stoneTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-                    <img id="orbtex" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2F5665221326_8722f0b6e3.jpg?v=1614324489801">
-                    <img id="tron-floor" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2F10090-v4.jpg?v=1614324486008">
-                    <img id="tron-red-tex" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2F10125.jpg?v=1614324493261">
-                    <img id="tron-green-tex" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2F10090-v5.jpg?v=1614324496373">
-                    <img id="tron-blue-tex" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2F9003.jpg?v=1614373143185">
-                    
-                    <!-- GIFs-->
-                    <img id="bpe-gif-1" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FFull_BPE_Demo.gif?v=1614294724049">
-                    <img id ="bpe-gif-2" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Fbpe_skelebody.gif?v=1614294736641">
-                    <img id="bpe-gif-3" src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Fbpe_skeleton.gif?v=1614294758874">
-                    
-                    <!-- MIXINS-->
-                    <a-mixin id="cube" geometry="primitive: box; width: 0.33; height: 0.33; depth: 0.33" hoverable grabbable stretchable draggable event-set__hoveron="_event: grab-start; material.opacity: 0.7" event-set__hoveroff="_event: drag-end; material.opacity: 1" dynamic-body shadow></a-mixin>
-                    <a-mixin id="hand" raycaster="objects: .clickable" physics-collider phase-shift collision-filter="collisionForces: false" static-body="shape: sphere; sphereRadius: 0.02" super-hands="colliderEvent: collisions; colliderEventProperty: els; colliderEndEvent: collisions; colliderEndEventProperty: clearedEls;"></a-mixin>
-                    
-                    <a-mixin id="menu-item" material="opacity: 0.8" event-set__mouseenter="opacity: 0.6" event-set__mouseleave="opacity: 0.8"></a-mixin>
-                    
-                  </a-assets>
-                  
-                  <!-- A-Frame Hello World scene 
+                });
+                el.addEventListener("gripup", function () {
+                  el.setAttribute("collision-filter", {
+                    collisionForces: false,
+                  });
+                });
+              },
+            });
+          </script>
+
+          <script>
+            // Component to change to a sequential color on click.
+            AFRAME.registerComponent("cursor-listener", {
+              init: function () {
+                var lastIndex = -1;
+                var COLORS = ["red", "green", "blue", "white"];
+                this.el.addEventListener("fusing", function (evt) {
+                  lastIndex = (lastIndex + 1) % COLORS.length;
+                  this.setAttribute("material", "color", COLORS[lastIndex]);
+                  console.log(
+                    "I was clicked at: ",
+                    evt.detail.intersection.point
+                  );
+                });
+              },
+            });
+          </script>
+
+          <!--PROJECT ASSETS-->
+          <a-assets>
+            <!-- SOUNDS -->
+            <audio
+              id="teleport-sound"
+              src="//cdn.rawgit.com/michaelnebeling/src/master/button-4.mp3"
+              crossorigin="anonymous"
+            ></audio>
+            <!--Blade Runner Ambient Effect Source: https://freesound.org/people/onderwish/sounds/416070/-->
+            <audio
+              id="future-ambient"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Fblade_runner_ambient.mp3?v=1614323183996"
+              crossorigin="anonymous"
+            ></audio>
+
+            <!-- VIDEOS -->
+            <video
+              id="bpe-video"
+              preload="auto"
+              loop="false"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FVirtual%20Personal%20Trainer.mp4?v=1614383717586"
+              crossorigin="anonymous"
+              muted
+            ></video>
+            <video
+              id="hike-video"
+              preload="auto"
+              loop="false"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FAR%20Glasses%20Assistant%20for%20Nature%20Exploration.mp4?v=1614442333005"
+              crossorigin="anonymous"
+              muted
+            ></video>
+            <video
+              id="dbz-video"
+              preload="auto"
+              autoplay
+              loop="false"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FDragon%20Ball%20XYZ%20short.mp4?v=1614444427535"
+              crossorigin="anonymous"
+              muted
+            ></video>
+            <video
+              id="sleep-video"
+              preload="auto"
+              autoplay
+              loop="false"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FSleep%20Hygiene%20VR.mp4?v=1614445809369"
+              crossorigin="anonymous"
+              muted
+            ></video>
+
+            <!--3D MODELS-->
+            <a-gltf-model
+              id="orb"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Fbladerunnerorb.glb?v=1614318070995"
+              shader="flat"
+            ></a-gltf-model>
+            <a-gltf-model
+              id="archway"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Ftron_entrance.glb?v=1614390672951"
+            ></a-gltf-model>
+            <a-gltf-model
+              id="cycle"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Ftron_cycle.glb?v=1614390713220"
+              shader="flat"
+            ></a-gltf-model>
+
+            <!-- TEXTURES -->
+            <img id="stoneTexture" src="https://i.imgur.com/mYmmbrp.jpg" />
+            <img
+              id="orbtex"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2F5665221326_8722f0b6e3.jpg?v=1614324489801"
+            />
+            <img
+              id="tron-floor"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2F10090-v4.jpg?v=1614324486008"
+            />
+            <img
+              id="tron-red-tex"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2F10125.jpg?v=1614324493261"
+            />
+            <img
+              id="tron-green-tex"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2F10090-v5.jpg?v=1614324496373"
+            />
+            <img
+              id="tron-blue-tex"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2F9003.jpg?v=1614373143185"
+            />
+
+            <!-- GIFs-->
+            <img
+              id="bpe-gif-1"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FFull_BPE_Demo.gif?v=1614294724049"
+            />
+            <img
+              id="bpe-gif-2"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Fbpe_skelebody.gif?v=1614294736641"
+            />
+            <img
+              id="bpe-gif-3"
+              src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Fbpe_skeleton.gif?v=1614294758874"
+            />
+
+            <!-- MIXINS-->
+            <a-mixin
+              id="cube"
+              geometry="primitive: box; width: 0.33; height: 0.33; depth: 0.33"
+              hoverable
+              grabbable
+              stretchable
+              draggable
+              event-set__hoveron="_event: grab-start; material.opacity: 0.7"
+              event-set__hoveroff="_event: drag-end; material.opacity: 1"
+              dynamic-body
+              shadow
+            ></a-mixin>
+            <a-mixin
+              id="hand"
+              raycaster="objects: .clickable"
+              physics-collider
+              phase-shift
+              collision-filter="collisionForces: false"
+              static-body="shape: sphere; sphereRadius: 0.02"
+              super-hands="colliderEvent: collisions; colliderEventProperty: els; colliderEndEvent: collisions; colliderEndEventProperty: clearedEls;"
+            ></a-mixin>
+
+            <a-mixin
+              id="menu-item"
+              material="opacity: 0.8"
+              event-set__mouseenter="opacity: 0.6"
+              event-set__mouseleave="opacity: 0.8"
+            ></a-mixin>
+          </a-assets>
+
+          <!-- A-Frame Hello World scene 
                   <a-box id="box" position="-1 0.5 -3" rotation="0 45 0" width="1" height="1" depth="1" color="#4CC3D9" shadow></a-box>
                   <a-sphere id="sphere" position="0 1.25 -5" radius="1.25" shadow color="#EF2D5E"></a-sphere>
                   <a-cylinder id="cylinder" position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
                   <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>-->
-                  
-                  <!--Curve-Point and Draw-Curve reference page: https://codepen.io/mnebeling/pen/ebREgq?editors=1010-->
-                  <a-curve id="orb-track-low" rotation="0 180 0">
-                    <a-curve-point position="-0.21 0.5 -3.19"></a-curve-point>
-                    <a-curve-point position="-3.2 0.5 -1.3"></a-curve-point>
-                    <a-curve-point position="-2.53 0.5 2.1" ></a-curve-point>
-                    <a-curve-point position="2 0.5 2.5"></a-curve-point>
-                    <a-curve-point position="3.1 0.5 -0.7"></a-curve-point>
-                    <a-curve-point position="-0.21 0.5 -3.19"></a-curve-point>
-                  </a-curve>
-                  
-                  <a-curve id="orb-track-mid" rotation="0 180 0">        
-                    <a-curve-point position="-0.21 1 -3.19"></a-curve-point>
-                    <a-curve-point position="3.1 1 -0.7"></a-curve-point>
-                    <a-curve-point position="2 1 2.5"></a-curve-point>
-                    <a-curve-point position="-2.53 1 2.1" ></a-curve-point>
-                    <a-curve-point position="-3.2 1 -1.3"></a-curve-point>
-                    <a-curve-point position="-0.21 1 -3.19"></a-curve-point>        
-                  </a-curve>
-                  
-                  <a-curve id="orb-track-high" rotation="0 180 0">
-                    <a-curve-point position="-0.21 2 -3.19"></a-curve-point>
-                    <a-curve-point position="-3.2 2 -1.3"></a-curve-point>
-                    <a-curve-point position="-2.53 2 2.1" ></a-curve-point>
-                    <a-curve-point position="2 2 2.5"></a-curve-point>
-                    <a-curve-point position="3.1 2 -0.7"></a-curve-point>
-                    <a-curve-point position="-0.21 2 -3.19"></a-curve-point>
-                  </a-curve>
-                  
-                  <!--<a-draw-curve curveref="#orb-track-low"></a-draw-curve>-->
-                  
-                  <!-- PARTICLE SYSTEM -->
-                  <!--<a-entity position="-5 3 -22" particle-system="preset: dust; maxParticleCount: 100; particleCount: 100: duration: 120"></a-entity>-->
-                  
-                  <!-- LIGHT SPHERES -->
-                  <a-entity geometry="primitive: sphere"  material="color: #FFF; shader: flat" light="type: point; intensity: 1; distance: .1" id="moving-orb" alongpath="curve: #orb-track-low; rotate: true; dur: 3000; loop: true; resetonplay: false" scale="0.25 0.25 0.25" rotation="45 0 0" animation-mixer></a-entity>    
-                  <a-entity geometry="primitive: sphere"  material="color: #FFF; shader: flat" light="type: point; intensity: 1; distance: .1" id="moving-orb-mid" alongpath="curve: #orb-track-mid; rotate: true; dur: 4000; loop: true; resetonplay: false" scale="0.25 0.25 0.25" rotation="0 45 0" animation-mixer></a-entity>
-                  <a-entity geometry="primitive: sphere"  material="color: #FFF; shader: flat" light="type: point; intensity: 1; distance: .1" id="moving-orb-high" alongpath="curve: #orb-track-high; rotate: true; dur: 5000; loop: true; resetonplay: false" scale="0.25 0.25 0.25" rotation="0 0 45" animation-mixer></a-entity>
-                  
-                  <!--SPAWNING PORTAL-->
-                  <a-cylinder src="#orbtex" shader="flat" position="0 .01 0" scale="1 .01 1" sound="src: #future-ambient; autoplay: true; loop: true; volume: .5" ></a-cylinder>
-                  
-                  <!-- FLYING BOXES -->
-                  <a-box position="-1 10 -25" scale="3.5 3 3.5" src="#tron-green-tex" shader="flat" animation="property: position; from: -6 20 -28; to: 16 20 -28; dur: 10000; dir: alternate; easing: linear; loop: true" animation__mouseenter="property: scale; to: 1 1 1; dur: 300; startEvents: mouseenter" animation__mouseleave="property: scale; to: 3.5 3 3.5; dur: 300; startEvents: mouseleave" ></a-box>
-                  <a-box position="-1 10 -25" scale="2 1 2.5" src="#tron-red-tex" shader="flat" animation="property: position; from: -5 8 0; to: -5 8 -22; dur: 10000; dir: alternate; easing: linear; loop: true" animation__mouseenter="property: scale; to: .5 .25 .75; dur: 300; startEvents: mouseenter" animation__mouseleave="property: scale; to: 2 1 2.5; dur: 300; startEvents: mouseleave"></a-box>      
-                  <a-box position="-1 10 -25" scale="1 .5 1" src="#tron-green-tex" shader="flat" animation="property: position; from: -3 7 -3; to: 10 7 -3; dur: 10000; dir: alternate; easing: linear; loop: true" animation__mouseenter="property: scale; to: .5 .25 .5; dur: 300; startEvents: mouseenter" animation__mouseleave="property: scale; to: 1 .5 1; dur: 300; startEvents: mouseleave"></a-box>  
-                  <a-box position="-1 10 -25" scale=".75 1.5 1.5" src="#tron-blue-tex" shader="flat" animation="property: position; from: 2 8 -21; to: 2 8 -1; dur: 10000; dir: alternate; easing: linear; loop: true" animation__mouseenter="property: scale; to: .25 .5 .5; dur: 300; startEvents: mouseenter" animation__mouseleave="property: scale; to: .75 1.5 1.5; dur: 300; startEvents: mouseleave"></a-box>    
-                  <a-box position="-1 10 -25" scale="1.5 1.5 1.5" src="#tron-red-tex" shader="flat" animation="property: position; from: 17 9 -10; to: -1 9 -10; dur: 10000; dir: alternate; easing: linear; loop: true" animation__mouseenter="property: scale; to: .5 .5 .5; dur: 300; startEvents: mouseenter" animation__mouseleave="property: scale; to: 1.5 1.5 1.5; dur: 300; startEvents: mouseleave"></a-box>     
-                  <a-box position="-1 10 -25" scale="1 1.7 1.7" src="#tron-green-tex" shader="flat" animation="property: position; from: 7 6 -5; to: 7 6 -20; dur: 10000; dir: alternate; easing: linear; loop: true" animation__mouseenter="property: scale; to: .25 .75 .75; dur: 300; startEvents: mouseenter" animation__mouseleave="property: scale; to: 1 1.7 1.7; dur: 300; startEvents: mouseleave"></a-box>    
-                  <a-box position="-1 10 -25" scale="2 3 3" src="#tron-floor" shader="flat" animation="property: position; from: -5 12 -16; to: 17 12 -16; dur: 10000; dir: alternate; easing: linear; loop: true" animation__mouseenter="property: scale; to: .25 .75 .75; dur: 300; startEvents: mouseenter" animation__mouseleave="property: scale; to: 2 3 3; dur: 300; startEvents: mouseleave"></a-box>      
-                  <a-box position="-1 10 -25" scale="2.5 1 2.5" src="#tron-blue-tex" shader="flat" animation="property: position; from: 15 6 -22; to: -6 6 -22; dur: 10000; dir: alternate; easing: linear; loop: true" animation__mouseenter="property: scale; to: .25 .75 .75; dur: 300; startEvents: mouseenter" animation__mouseleave="property: scale; to: 2.5 1.5 2.5; dur: 300; startEvents: mouseleave"></a-box>2 1 2.5
-                  
-                  <!-- FLOOR PATHS -->
-                  <a-entity geometry="primitive: box" material="src: #tron-floor; repeat: 1 10; shader: flat" position="-2.12 0 -5.42" scale=".5 .01 9" rotation="0 21.6 0"></a-entity>
-                  <a-entity geometry="primitive: box" material="src: #tron-floor; repeat: 1 15; shader: flat" position="2.71 0 -15.93" scale=".5 .03 16" rotation="0 -45 0"></a-entity>
-                  <a-entity geometry="primitive: box" material="src: #tron-floor; repeat: 1 15; shader: flat" position="3.47 0 -25.15" scale=".5 .11 11" rotation="0 56.6 0"></a-entity>
-                  <a-entity geometry="primitive: box" material="src: #tron-floor; repeat: 1 15; shader: flat" position="10.45 0 -14.4" scale=".5 .01 14" rotation="0 12.4 0"></a-entity>
-                  
-                  
-                  <!-- INTERACTABLE CUBES-->
-                  <a-entity class="cube" mixin="cube" scale="3 3 3" position="3 0.5 -11" material="shader: flat; src: #tron-red-tex" shadow></a-entity>
-                  <a-entity class="cube" mixin="cube" scale="2 3 2" position="-1 0.5 -17" material="shader: flat; src: #tron-red-tex" shadow></a-entity>
-                  <a-entity class="cube" mixin="cube" scale="3 3 3" position="3 0.5 -20" material="shader: flat; src: #tron-green-tex" shadow></a-entity>
-                  <a-entity class="cube" mixin="cube" scale="2 3 2" position="0 0.5 -8" material="shader: flat; src: #tron-green-tex" shadow></a-entity>
-                  <a-entity class="cube" mixin="cube" scale="3 4 3" position="8 0.5 -13" material="shader: flat; src: #tron-blue-tex" shadow></a-entity>
-                  <a-entity class="cube" mixin="cube" scale="2 2 2" position="-2 0.5 -14" material="shader: flat; src: #tron-blue-tex" shadow></a-entity>
-                  
-                  <!------------LECTERNS AND TEXT------------->
-                  <!--Left Near-->      
-                  <a-box color="black" position="-4 0.9 -10" scale="1.7 .01 2.2" rotation="20 40 0" shader="flat">
-                    <a-entity text="value:This project is an immersive application intended to help people exercise in virtual reality. It provides users with a personal workout trainer that performs a series of body moves that the user then replicates. The user receives visual feedback on their performace in real time-- body parts that match the coach turn green, and unmatched remain red. Users can customize their experience by choosing from several environments, coaches, exercises, and other settings.\n
-                                    The application is entirely interacted with the user's gaze, making the experienc plaftorm agnostic for all head mounted displays with controllers. The body pose data used to animate the coaches was generated with motion capture camera data parsed into the application. The user's body pose is tracked via the HMD and the associated hand controllers. The Unity game engine was used as the development environment, along with the Unity Inverse Kinematics plugin to animate the skeletons.;
-                                    color: #FAFAFA; width: 1.3; anchor: align" position="-0.45 0.6 0" scale=".7 .7 .7" rotation="-80 0 0"></a-entity>
-                    <a-cylinder color="grey" position="0 -30 0" scale=".1 50 .1" rotation="0 0 0"></a-cylinder>
-                  </a-box>
-            
-                  <!--Right Far-->
-                  <a-box color="black" position="8.9 0.9 -22" scale="1.7 .01 2.2" rotation="15 -48 0" shader="flat">
-                    <a-entity text="value:This project is an immersive application intended to help people exercise in virtual reality. It provides users with a personal workout trainer that performs a series of body moves that the user then replicates. The user receives visual feedback on their performace in real time-- body parts that match the coach turn green, and unmatched remain red. Users can customize their experience by choosing from several environments, coaches, exercises, and other settings.\n
-                                    The application is entirely interacted with the user's gaze, making the experienc plaftorm agnostic for all head mounted displays with controllers. The body pose data used to animate the coaches was generated with motion capture camera data parsed into the application. The user's body pose is tracked via the HMD and the associated hand controllers. The Unity game engine was used as the development environment, along with the Unity Inverse Kinematics plugin to animate the skeletons.;
-                                    color: #FAFAFA; width: 1.3; anchor: align" position="-0.45 0.6 0" scale=".7 .7 .7" rotation="-80 0 0"></a-entity>
-                    <a-cylinder color="grey" position="0 -30 0" scale=".1 50 .1" rotation="0 0 0"></a-cylinder>
-                  </a-box>
-                  
-                  <!--Left Far-->
-                  <a-box color="black" position="-1.67 0.9 -28.4" scale="1.7 .01 2.2" rotation="15 58.7 0" shader="flat">
-                    <a-entity text="value:This project is an immersive application intended to help people exercise in virtual reality. It provides users with a personal workout trainer that performs a series of body moves that the user then replicates. The user receives visual feedback on their performace in real time-- body parts that match the coach turn green, and unmatched remain red. Users can customize their experience by choosing from several environments, coaches, exercises, and other settings.\n
-                                    The application is entirely interacted with the user's gaze, making the experienc plaftorm agnostic for all head mounted displays with controllers. The body pose data used to animate the coaches was generated with motion capture camera data parsed into the application. The user's body pose is tracked via the HMD and the associated hand controllers. The Unity game engine was used as the development environment, along with the Unity Inverse Kinematics plugin to animate the skeletons.;
-                                    color: #FAFAFA; width: 1.3; anchor: align" position="-0.45 0.6 0" scale=".7 .7 .7" rotation="-80 0 0"></a-entity>
-                    <a-cylinder color="grey" position="0 -30 0" scale=".1 50 .1" rotation="0 0 0"></a-cylinder>
-                  </a-box>
-                  
-                  <!--Right Near-->
-                  <a-box color="black" position="12 0.9 -7.2" scale="1.7 .01 2.2" rotation="15 -168 0" shader="flat">
-                    <a-entity text="value:This project is an immersive application intended to help people exercise in virtual reality. It provides users with a personal workout trainer that performs a series of body moves that the user then replicates. The user receives visual feedback on their performace in real time-- body parts that match the coach turn green, and unmatched remain red. Users can customize their experience by choosing from several environments, coaches, exercises, and other settings.\n
-                                    The application is entirely interacted with the user's gaze, making the experienc plaftorm agnostic for all head mounted displays with controllers. The body pose data used to animate the coaches was generated with motion capture camera data parsed into the application. The user's body pose is tracked via the HMD and the associated hand controllers. The Unity game engine was used as the development environment, along with the Unity Inverse Kinematics plugin to animate the skeletons.;
-                                    color: #FAFAFA; width: 1.3; anchor: align" position="-0.45 0.6 0" scale=".7 .7 .7" rotation="-80 0 0"></a-entity>
-                    <a-cylinder color="grey" position="0 -30 0" scale=".1 50 .1" rotation="0 0 0"></a-cylinder>
-                  </a-box>
-                  
-                  <!-- GIFs -->
-                  <!--<a-curvedimage position="9 3 -22" rotation="0 98 0" scale="1 1 1" height="4.0" radius="5.7" theta-length="72" shader="gif" src="#bpe-gif-1" ></a-curvedimage>-->      
-                  <!--<a-curvedimage position="9.2 3 -21.6" rotation="0 64.6 0" scale="1 1 1" height="4.0" radius="5.7" theta-length="72" shader="gif" src="#bpe-gif-2" ></a-curvedimage>-->
-                  
-                  <!-- VIDEO -->
-                  <a-curvedimage id="bpe-video-screen" class="videos" position="-5 3 -10" rotation="0 180 0" scale="1 1 1" height="4.0" radius="5.7" theta-length="72" src="#bpe-video" play-on-click></a-curvedimage>
-                  <a-curvedimage id="hike-video-screen" class="videos" position="9 3 -22" rotation="0 98 0" scale="1 1 1" height="4.0" radius="5.7" theta-length="72" src="#hike-video" ></a-curvedimage>
-                  <a-curvedimage id="dbz-video-screen" class="videos" position="-1.1 3 -27.7" rotation="0 200 0" scale="1 1 1" height="4.0" radius="5.7" theta-length="72" src="#dbz-video" ></a-curvedimage>
-                  <a-curvedimage id="sleep-video-screen" class="videos" position="12.2 3 -6.5" rotation="0 -24.2 0" scale="1 1 1" height="4.0" radius="5.7" theta-length="72" src="#sleep-video" ></a-curvedimage>
-                  
-                 <!-- HALLWAY ORBS-->
-                  <a-gltf-model
-                    src="#orb"
-                    shader="flat"
-                    position="-2 1.5 -11"
-                    rotation="0 90 -90"
-                    scale="1 1 1"
-                    animation__position="property: object3D.position.y; from: 1.5; to: 2.2; dir: alternate; dur: 2000; loop: true">
-                      <a-entity geometry="primitive: sphere"  material="color: #FFF; shader: flat" cursor-listener light="type: point; intensity: 1; distance: .1" id="light-bulb-1"  scale="0.25 0.25 0.25" position="-0.8 1.6 -.65" animation__mouseenter="property: color; to: blue; dur: 300; startEvents: mouseenter" animation__mouseleave="property: color; to: #FFF; dur: 300; startEvents: mouseleave"></a-entity>
-                  </a-gltf-model>
-                 <a-gltf-model
-                    src="#orb"
-                    shader="flat"
-                    position="1 1.5 -10"
-                    rotation="0 90 -90"
-                    scale="1 1 1"
-                    animation__position="property: object3D.position.y; from: 1.5; to: 2.2; dir: alternate; dur: 2000; loop: true">
-                   <a-entity geometry="primitive: sphere"  material="color: #FFF; shader: flat" cursor-listener light="type: point; intensity: 1; distance: .1" id="light-bulb-2"  scale="0.25 0.25 0.25" position="-0.8 1.6 -.65"></a-entity>
-                  </a-gltf-model>
-               
-                  <a-gltf-model
-                    src="#orb"
-                    shader="flat"            
-                    position="2 1.5 -15"
-                    rotation="0 90 -90"
-                    scale="1 1 1"
-                    animation__position="property: object3D.position.y; from: 1.5; to: 2.2; dir: alternate; dur: 2000; loop: true">
-                      <a-entity geometry="primitive: sphere"  material="color: #FFF; shader: flat" cursor-listener light="type: point; intensity: 1; distance: .1" id="light-bulb-3"  scale="0.25 0.25 0.25" position="-0.8 1.6 -.65"></a-entity>
-                  </a-gltf-model>
-                  
-                  <a-gltf-model
-                    src="#orb"
-                    shader="flat"
-                    position="6 1.5 -15"
-                    rotation="0 90 -90"
-                    scale="1 1 1"
-                    animation__position="property: object3D.position.y; from: 1.5; to: 2.2; dir: alternate; dur: 2000; loop: true">
-                      <a-entity geometry="primitive: sphere"  material="color: #FFF; shader: flat" cursor-listener light="type: point; intensity: 1; distance: .1" id="light-bulb-4"  scale="0.25 0.25 0.25" position="-0.8 1.6 -.65"></a-entity>
-                  </a-gltf-model>
-                  
-                  <!-- ARCHWAY -->
-                  <a-gltf-model src="#archway" position="-8 -0.2 -21" scale=".5 .5 .5" rotation="0 90 0" material="shader: flat"></a-gltf-model>
-                  
-                  <!--PROJECT NAME TEXT-->
-                  <a-entity text="value:Hey there!\nFeel free to browse\nmy XR projects here.\n-Christian Gutierrez; font: monoid; color: #FAFAFA; width: 3; anchor: align" position="-0.5 1 -3.62" scale="1.5 1.5 1.5" rotation="0 -18 0"></a-entity>
-            
-                  <!--GROUND PLANE FOR PHYSICS-->
-                  <a-plane scale="200 200 0" color="red" position="0 -0.01 0" rotation="-90 0 0" static-body></a-plane>
-                      
-                  <!--CAMERA RIG: HEAD AND HANDS-->
-                  <a-entity id="cameraRig">
-                    <a-camera id="head" camera wasd-controls look-controls position="0 1.6 0">
-                      <a-entity cursor="fuse: true; fuseTimeout: 500" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" position="0 0 -1" material="color: #FAFAFA; shader: flat"></a-entity>
-                    </a-camera>    
-                    <!-- LEFT HAND -->
-                    <a-entity id="left-hand" mixin="hand" oculus-touch-controls="hand: left">
-                      <!-- controller menu -->
-                      <a-entity id="controller-menu" opacity="0.8" visible="true">
-                        <a-entity id="menu" position="0 0.05 -0.05" rotation="-30 0 0" scale=".9 .9 .9" >
-                          <a-entity id="mini-bpe" class="menu-item clickable" mixin="menu-item" text="value: VR Workout Coach; font: monoid; color: #FAFAFA;" position="0.3 0.05 0" rotation="0 0 0" data-target="#bpe-target" animation__mouseenter="property: color; to: green; dur: 300; startEvents: mouseenter" animation__mouseleave="property: color; to: #FAFAFA; dur: 300; startEvents: mouseleave"></a-entity>                          
-                          <a-entity id="mini-hike" class="menu-item clickable" mixin="menu-item" text="value: AR Hiking App; font: monoid; color: #FAFAFA;" position="0.3 -.25 0" rotation="0 0 0"  data-target="#hike-target" animation__mouseenter="property: color; to: green; dur: 300; startEvents: mouseenter" animation__mouseleave="property: color; to: #FAFAFA; dur: 300; startEvents: mouseleave"></a-entity>              
-                          <a-entity id="mini-dbz" class="menu-item clickable" mixin="menu-item" text="value: Dragon Ball XYZ; font: monoid; color: #FAFAFA;" position="0 -.1 0" rotation="0 0 0" data-target="#dbz-target" animation__mouseenter="property: color; to: green; dur: 300; startEvents: mouseenter" animation__mouseleave="property: color; to: #FAFAFA; dur: 300; startEvents: mouseleave"></a-entity>
-                          <a-entity id="mini-sleep" class="menu-item clickable" mixin="menu-item" text="value: Sleep Hygiene VR; font: monoid; color: #FAFAFA;" position=".6 -.1 0" rotation="0 0 0"  data-target="#sleep-target" animation__mouseenter="property: color; to: green; dur: 300; startEvents: mouseenter" animation__mouseleave="property: color; to: #FAFAFA; dur: 300; startEvents: mouseleave"></a-entity>
-                        </a-entity>
-                      </a-entity>
-                    </a-entity>
-                    <!--<a-entity id="left-hand" raycaster="objects: .clickable; far: 10; lineColor: white; lineOpacity: 0.5" controller-cursor="color: green" mixin="hand" oculus-touch-controls="hand: left"></a-entity>-->
-                    <!-- RIGHT HAND -->
-                    <a-entity id="right-hand" laser-controls="hand: right" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; type: parabolic; hitCylinderColor: #bc13fe; curveHitColor: #bc13fe;" mixin="hand" oculus-touch-controls="hand: right" sound="src: #teleport-sound; on: teleported; volume: .01"></a-entity>
-                  </a-entity>
-                  
-                </a-scene>    
-            </div>
 
+          <!--Curve-Point and Draw-Curve reference page: https://codepen.io/mnebeling/pen/ebREgq?editors=1010-->
+          <a-curve id="orb-track-low" rotation="0 180 0">
+            <a-curve-point position="-0.21 0.5 -3.19"></a-curve-point>
+            <a-curve-point position="-3.2 0.5 -1.3"></a-curve-point>
+            <a-curve-point position="-2.53 0.5 2.1"></a-curve-point>
+            <a-curve-point position="2 0.5 2.5"></a-curve-point>
+            <a-curve-point position="3.1 0.5 -0.7"></a-curve-point>
+            <a-curve-point position="-0.21 0.5 -3.19"></a-curve-point>
+          </a-curve>
 
-            <!--------------------------SECTION: Companies ----------------------------------->
-            <p class="lower-info">
-                Feel free to <a href="/CFG_Resume.pdf" target="_blank" id="resume-link">check out my resume</a> for more info. Below is a list of
-                <br>companies that I have done software development work for.
-            </p>
-            
-            <div id="company-container">
-                <div class="box a comp_card_single">
-                    <div class="card_front">
-                        <img id="adobe-logo" class="comp-logo card_image" src="images/Adobe_Logo.png" alt="Adobe Logo">
-                    </div>
-                    <div class="card_back">Adobe Project</div>
-                </div>
-                <div class="box d comp_card_single">
-                    <div class="card_front">
-                        <img id="nasajpl-logo" class="comp-logo card_image" src="images/NASAJPL_Logo_Small.png" alt="NASAJPL Logo">
-                    </div>
-                    <div class="card_back">NASA JPL Project</div>
-                </div>
-                <div class="box c comp_card_single">
-                    <div class="card_front">
-                        <img id="intel-logo" class="comp-logo card_image" src="images/Intel_Logo_Small.png" alt="Intel Logo">
-                    </div>
-                    <div class="card_back">Intel Project</div>
-                </div>
-                <div class="box b comp_card_single">
-                    <div class="card_front">
-                        <img id="qualcomm-logo" class="comp-logo card_image" src="images/Qualcomm_Logo_Small.png" alt="Qualcomm Logo">
-                    </div>
-                    <div class="card_back">Qualcomm Project</div>
-                </div>
-                <div class="box e comp_card_single">
-                    <div class="card_front">
-                        <img id="nanome-logo" class="comp-logo card_image" src="images/Nanome_Logo_Small.png" alt="Nanome Logo">
-                    </div>
-                    <div class="card_back">Nanome Project</div>
-                </div>
-                <div class="box f comp_card_single">
-                    <div class="card_front">
-                        <img id="ccas-logo" class="comp-logo card_image" src="images/CCAS_Logo.png" alt="CCAS Logo">
-                    </div>
-                    <div class="card_back">UCCA Project</div>
-                </div>
-            </div>                        
+          <a-curve id="orb-track-mid" rotation="0 180 0">
+            <a-curve-point position="-0.21 1 -3.19"></a-curve-point>
+            <a-curve-point position="3.1 1 -0.7"></a-curve-point>
+            <a-curve-point position="2 1 2.5"></a-curve-point>
+            <a-curve-point position="-2.53 1 2.1"></a-curve-point>
+            <a-curve-point position="-3.2 1 -1.3"></a-curve-point>
+            <a-curve-point position="-0.21 1 -3.19"></a-curve-point>
+          </a-curve>
 
-        </main>
-        <script src="js/about.js"></script>     
-    </body>
+          <a-curve id="orb-track-high" rotation="0 180 0">
+            <a-curve-point position="-0.21 2 -3.19"></a-curve-point>
+            <a-curve-point position="-3.2 2 -1.3"></a-curve-point>
+            <a-curve-point position="-2.53 2 2.1"></a-curve-point>
+            <a-curve-point position="2 2 2.5"></a-curve-point>
+            <a-curve-point position="3.1 2 -0.7"></a-curve-point>
+            <a-curve-point position="-0.21 2 -3.19"></a-curve-point>
+          </a-curve>
 
-    <footer class="lower-info">Copyright 2021&copy Christian Gutierrez<br>
-      <div style="width: 100%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 50px;">
-        <span style="font-size: 48px; color: ghostwhite;"><a href="mailto:gutierrezchristianf@gmail.com"><i class="fas fa-envelope-square"></i></a></span>
-        <span style="font-size: 48px; color: ghostwhite;"><a href="https://www.linkedin.com/in/christianfgutierrez" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+          <!--<a-draw-curve curveref="#orb-track-low"></a-draw-curve>-->
+
+          <!-- PARTICLE SYSTEM -->
+          <!--<a-entity position="-5 3 -22" particle-system="preset: dust; maxParticleCount: 100; particleCount: 100: duration: 120"></a-entity>-->
+
+          <!-- LIGHT SPHERES -->
+          <a-entity
+            geometry="primitive: sphere"
+            material="color: #FFF; shader: flat"
+            light="type: point; intensity: 1; distance: .1"
+            id="moving-orb"
+            alongpath="curve: #orb-track-low; rotate: true; dur: 3000; loop: true; resetonplay: false"
+            scale="0.25 0.25 0.25"
+            rotation="45 0 0"
+            animation-mixer
+          ></a-entity>
+          <a-entity
+            geometry="primitive: sphere"
+            material="color: #FFF; shader: flat"
+            light="type: point; intensity: 1; distance: .1"
+            id="moving-orb-mid"
+            alongpath="curve: #orb-track-mid; rotate: true; dur: 4000; loop: true; resetonplay: false"
+            scale="0.25 0.25 0.25"
+            rotation="0 45 0"
+            animation-mixer
+          ></a-entity>
+          <a-entity
+            geometry="primitive: sphere"
+            material="color: #FFF; shader: flat"
+            light="type: point; intensity: 1; distance: .1"
+            id="moving-orb-high"
+            alongpath="curve: #orb-track-high; rotate: true; dur: 5000; loop: true; resetonplay: false"
+            scale="0.25 0.25 0.25"
+            rotation="0 0 45"
+            animation-mixer
+          ></a-entity>
+
+          <!--SPAWNING PORTAL-->
+          <a-cylinder
+            src="#orbtex"
+            shader="flat"
+            position="0 .01 0"
+            scale="1 .01 1"
+            sound="src: #future-ambient; autoplay: true; loop: true; volume: .5"
+          ></a-cylinder>
+
+          <!-- FLYING BOXES -->
+          <a-box
+            position="-1 10 -25"
+            scale="3.5 3 3.5"
+            src="#tron-green-tex"
+            shader="flat"
+            animation="property: position; from: -6 20 -28; to: 16 20 -28; dur: 10000; dir: alternate; easing: linear; loop: true"
+            animation__mouseenter="property: scale; to: 1 1 1; dur: 300; startEvents: mouseenter"
+            animation__mouseleave="property: scale; to: 3.5 3 3.5; dur: 300; startEvents: mouseleave"
+          ></a-box>
+          <a-box
+            position="-1 10 -25"
+            scale="2 1 2.5"
+            src="#tron-red-tex"
+            shader="flat"
+            animation="property: position; from: -5 8 0; to: -5 8 -22; dur: 10000; dir: alternate; easing: linear; loop: true"
+            animation__mouseenter="property: scale; to: .5 .25 .75; dur: 300; startEvents: mouseenter"
+            animation__mouseleave="property: scale; to: 2 1 2.5; dur: 300; startEvents: mouseleave"
+          ></a-box>
+          <a-box
+            position="-1 10 -25"
+            scale="1 .5 1"
+            src="#tron-green-tex"
+            shader="flat"
+            animation="property: position; from: -3 7 -3; to: 10 7 -3; dur: 10000; dir: alternate; easing: linear; loop: true"
+            animation__mouseenter="property: scale; to: .5 .25 .5; dur: 300; startEvents: mouseenter"
+            animation__mouseleave="property: scale; to: 1 .5 1; dur: 300; startEvents: mouseleave"
+          ></a-box>
+          <a-box
+            position="-1 10 -25"
+            scale=".75 1.5 1.5"
+            src="#tron-blue-tex"
+            shader="flat"
+            animation="property: position; from: 2 8 -21; to: 2 8 -1; dur: 10000; dir: alternate; easing: linear; loop: true"
+            animation__mouseenter="property: scale; to: .25 .5 .5; dur: 300; startEvents: mouseenter"
+            animation__mouseleave="property: scale; to: .75 1.5 1.5; dur: 300; startEvents: mouseleave"
+          ></a-box>
+          <a-box
+            position="-1 10 -25"
+            scale="1.5 1.5 1.5"
+            src="#tron-red-tex"
+            shader="flat"
+            animation="property: position; from: 17 9 -10; to: -1 9 -10; dur: 10000; dir: alternate; easing: linear; loop: true"
+            animation__mouseenter="property: scale; to: .5 .5 .5; dur: 300; startEvents: mouseenter"
+            animation__mouseleave="property: scale; to: 1.5 1.5 1.5; dur: 300; startEvents: mouseleave"
+          ></a-box>
+          <a-box
+            position="-1 10 -25"
+            scale="1 1.7 1.7"
+            src="#tron-green-tex"
+            shader="flat"
+            animation="property: position; from: 7 6 -5; to: 7 6 -20; dur: 10000; dir: alternate; easing: linear; loop: true"
+            animation__mouseenter="property: scale; to: .25 .75 .75; dur: 300; startEvents: mouseenter"
+            animation__mouseleave="property: scale; to: 1 1.7 1.7; dur: 300; startEvents: mouseleave"
+          ></a-box>
+          <a-box
+            position="-1 10 -25"
+            scale="2 3 3"
+            src="#tron-floor"
+            shader="flat"
+            animation="property: position; from: -5 12 -16; to: 17 12 -16; dur: 10000; dir: alternate; easing: linear; loop: true"
+            animation__mouseenter="property: scale; to: .25 .75 .75; dur: 300; startEvents: mouseenter"
+            animation__mouseleave="property: scale; to: 2 3 3; dur: 300; startEvents: mouseleave"
+          ></a-box>
+          <a-box
+            position="-1 10 -25"
+            scale="2.5 1 2.5"
+            src="#tron-blue-tex"
+            shader="flat"
+            animation="property: position; from: 15 6 -22; to: -6 6 -22; dur: 10000; dir: alternate; easing: linear; loop: true"
+            animation__mouseenter="property: scale; to: .25 .75 .75; dur: 300; startEvents: mouseenter"
+            animation__mouseleave="property: scale; to: 2.5 1.5 2.5; dur: 300; startEvents: mouseleave"
+          ></a-box
+          >2 1 2.5
+
+          <!-- FLOOR PATHS -->
+          <a-entity
+            geometry="primitive: box"
+            material="src: #tron-floor; repeat: 1 10; shader: flat"
+            position="-2.12 0 -5.42"
+            scale=".5 .01 9"
+            rotation="0 21.6 0"
+          ></a-entity>
+          <a-entity
+            geometry="primitive: box"
+            material="src: #tron-floor; repeat: 1 15; shader: flat"
+            position="2.71 0 -15.93"
+            scale=".5 .03 16"
+            rotation="0 -45 0"
+          ></a-entity>
+          <a-entity
+            geometry="primitive: box"
+            material="src: #tron-floor; repeat: 1 15; shader: flat"
+            position="3.47 0 -25.15"
+            scale=".5 .11 11"
+            rotation="0 56.6 0"
+          ></a-entity>
+          <a-entity
+            geometry="primitive: box"
+            material="src: #tron-floor; repeat: 1 15; shader: flat"
+            position="10.45 0 -14.4"
+            scale=".5 .01 14"
+            rotation="0 12.4 0"
+          ></a-entity>
+
+          <!-- INTERACTABLE CUBES-->
+          <a-entity
+            class="cube"
+            mixin="cube"
+            scale="3 3 3"
+            position="3 0.5 -11"
+            material="shader: flat; src: #tron-red-tex"
+            shadow
+          ></a-entity>
+          <a-entity
+            class="cube"
+            mixin="cube"
+            scale="2 3 2"
+            position="-1 0.5 -17"
+            material="shader: flat; src: #tron-red-tex"
+            shadow
+          ></a-entity>
+          <a-entity
+            class="cube"
+            mixin="cube"
+            scale="3 3 3"
+            position="3 0.5 -20"
+            material="shader: flat; src: #tron-green-tex"
+            shadow
+          ></a-entity>
+          <a-entity
+            class="cube"
+            mixin="cube"
+            scale="2 3 2"
+            position="0 0.5 -8"
+            material="shader: flat; src: #tron-green-tex"
+            shadow
+          ></a-entity>
+          <a-entity
+            class="cube"
+            mixin="cube"
+            scale="3 4 3"
+            position="8 0.5 -13"
+            material="shader: flat; src: #tron-blue-tex"
+            shadow
+          ></a-entity>
+          <a-entity
+            class="cube"
+            mixin="cube"
+            scale="2 2 2"
+            position="-2 0.5 -14"
+            material="shader: flat; src: #tron-blue-tex"
+            shadow
+          ></a-entity>
+
+          <!------------LECTERNS AND TEXT------------->
+          <!--Left Near-->
+          <a-box
+            color="black"
+            position="-4 0.9 -10"
+            scale="1.7 .01 2.2"
+            rotation="20 40 0"
+            shader="flat"
+          >
+            <a-entity
+              text="value:This project is an immersive application intended to help people exercise in virtual reality. It provides users with a personal workout trainer that performs a series of body moves that the user then replicates. The user receives visual feedback on their performace in real time-- body parts that match the coach turn green, and unmatched remain red. Users can customize their experience by choosing from several environments, coaches, exercises, and other settings.\n
+                                    The application is entirely interacted with the user's gaze, making the experienc plaftorm agnostic for all head mounted displays with controllers. The body pose data used to animate the coaches was generated with motion capture camera data parsed into the application. The user's body pose is tracked via the HMD and the associated hand controllers. The Unity game engine was used as the development environment, along with the Unity Inverse Kinematics plugin to animate the skeletons.;
+                                    color: #FAFAFA; width: 1.3; anchor: align"
+              position="-0.45 0.6 0"
+              scale=".7 .7 .7"
+              rotation="-80 0 0"
+            ></a-entity>
+            <a-cylinder
+              color="grey"
+              position="0 -30 0"
+              scale=".1 50 .1"
+              rotation="0 0 0"
+            ></a-cylinder>
+          </a-box>
+
+          <!--Right Far-->
+          <a-box
+            color="black"
+            position="8.9 0.9 -22"
+            scale="1.7 .01 2.2"
+            rotation="15 -48 0"
+            shader="flat"
+          >
+            <a-entity
+              text="value:This project is an immersive application intended to help people exercise in virtual reality. It provides users with a personal workout trainer that performs a series of body moves that the user then replicates. The user receives visual feedback on their performace in real time-- body parts that match the coach turn green, and unmatched remain red. Users can customize their experience by choosing from several environments, coaches, exercises, and other settings.\n
+                                    The application is entirely interacted with the user's gaze, making the experienc plaftorm agnostic for all head mounted displays with controllers. The body pose data used to animate the coaches was generated with motion capture camera data parsed into the application. The user's body pose is tracked via the HMD and the associated hand controllers. The Unity game engine was used as the development environment, along with the Unity Inverse Kinematics plugin to animate the skeletons.;
+                                    color: #FAFAFA; width: 1.3; anchor: align"
+              position="-0.45 0.6 0"
+              scale=".7 .7 .7"
+              rotation="-80 0 0"
+            ></a-entity>
+            <a-cylinder
+              color="grey"
+              position="0 -30 0"
+              scale=".1 50 .1"
+              rotation="0 0 0"
+            ></a-cylinder>
+          </a-box>
+
+          <!--Left Far-->
+          <a-box
+            color="black"
+            position="-1.67 0.9 -28.4"
+            scale="1.7 .01 2.2"
+            rotation="15 58.7 0"
+            shader="flat"
+          >
+            <a-entity
+              text="value:This project is an immersive application intended to help people exercise in virtual reality. It provides users with a personal workout trainer that performs a series of body moves that the user then replicates. The user receives visual feedback on their performace in real time-- body parts that match the coach turn green, and unmatched remain red. Users can customize their experience by choosing from several environments, coaches, exercises, and other settings.\n
+                                    The application is entirely interacted with the user's gaze, making the experienc plaftorm agnostic for all head mounted displays with controllers. The body pose data used to animate the coaches was generated with motion capture camera data parsed into the application. The user's body pose is tracked via the HMD and the associated hand controllers. The Unity game engine was used as the development environment, along with the Unity Inverse Kinematics plugin to animate the skeletons.;
+                                    color: #FAFAFA; width: 1.3; anchor: align"
+              position="-0.45 0.6 0"
+              scale=".7 .7 .7"
+              rotation="-80 0 0"
+            ></a-entity>
+            <a-cylinder
+              color="grey"
+              position="0 -30 0"
+              scale=".1 50 .1"
+              rotation="0 0 0"
+            ></a-cylinder>
+          </a-box>
+
+          <!--Right Near-->
+          <a-box
+            color="black"
+            position="12 0.9 -7.2"
+            scale="1.7 .01 2.2"
+            rotation="15 -168 0"
+            shader="flat"
+          >
+            <a-entity
+              text="value:This project is an immersive application intended to help people exercise in virtual reality. It provides users with a personal workout trainer that performs a series of body moves that the user then replicates. The user receives visual feedback on their performace in real time-- body parts that match the coach turn green, and unmatched remain red. Users can customize their experience by choosing from several environments, coaches, exercises, and other settings.\n
+                                    The application is entirely interacted with the user's gaze, making the experienc plaftorm agnostic for all head mounted displays with controllers. The body pose data used to animate the coaches was generated with motion capture camera data parsed into the application. The user's body pose is tracked via the HMD and the associated hand controllers. The Unity game engine was used as the development environment, along with the Unity Inverse Kinematics plugin to animate the skeletons.;
+                                    color: #FAFAFA; width: 1.3; anchor: align"
+              position="-0.45 0.6 0"
+              scale=".7 .7 .7"
+              rotation="-80 0 0"
+            ></a-entity>
+            <a-cylinder
+              color="grey"
+              position="0 -30 0"
+              scale=".1 50 .1"
+              rotation="0 0 0"
+            ></a-cylinder>
+          </a-box>
+
+          <!-- GIFs -->
+          <!--<a-curvedimage position="9 3 -22" rotation="0 98 0" scale="1 1 1" height="4.0" radius="5.7" theta-length="72" shader="gif" src="#bpe-gif-1" ></a-curvedimage>-->
+          <!--<a-curvedimage position="9.2 3 -21.6" rotation="0 64.6 0" scale="1 1 1" height="4.0" radius="5.7" theta-length="72" shader="gif" src="#bpe-gif-2" ></a-curvedimage>-->
+
+          <!-- VIDEO -->
+          <a-curvedimage
+            id="bpe-video-screen"
+            class="videos"
+            position="-5 3 -10"
+            rotation="0 180 0"
+            scale="1 1 1"
+            height="4.0"
+            radius="5.7"
+            theta-length="72"
+            src="#bpe-video"
+            play-on-click
+          ></a-curvedimage>
+          <a-curvedimage
+            id="hike-video-screen"
+            class="videos"
+            position="9 3 -22"
+            rotation="0 98 0"
+            scale="1 1 1"
+            height="4.0"
+            radius="5.7"
+            theta-length="72"
+            src="#hike-video"
+          ></a-curvedimage>
+          <a-curvedimage
+            id="dbz-video-screen"
+            class="videos"
+            position="-1.1 3 -27.7"
+            rotation="0 200 0"
+            scale="1 1 1"
+            height="4.0"
+            radius="5.7"
+            theta-length="72"
+            src="#dbz-video"
+          ></a-curvedimage>
+          <a-curvedimage
+            id="sleep-video-screen"
+            class="videos"
+            position="12.2 3 -6.5"
+            rotation="0 -24.2 0"
+            scale="1 1 1"
+            height="4.0"
+            radius="5.7"
+            theta-length="72"
+            src="#sleep-video"
+          ></a-curvedimage>
+
+          <!-- HALLWAY ORBS-->
+          <a-gltf-model
+            src="#orb"
+            shader="flat"
+            position="-2 1.5 -11"
+            rotation="0 90 -90"
+            scale="1 1 1"
+            animation__position="property: object3D.position.y; from: 1.5; to: 2.2; dir: alternate; dur: 2000; loop: true"
+          >
+            <a-entity
+              geometry="primitive: sphere"
+              material="color: #FFF; shader: flat"
+              cursor-listener
+              light="type: point; intensity: 1; distance: .1"
+              id="light-bulb-1"
+              scale="0.25 0.25 0.25"
+              position="-0.8 1.6 -.65"
+              animation__mouseenter="property: color; to: blue; dur: 300; startEvents: mouseenter"
+              animation__mouseleave="property: color; to: #FFF; dur: 300; startEvents: mouseleave"
+            ></a-entity>
+          </a-gltf-model>
+          <a-gltf-model
+            src="#orb"
+            shader="flat"
+            position="1 1.5 -10"
+            rotation="0 90 -90"
+            scale="1 1 1"
+            animation__position="property: object3D.position.y; from: 1.5; to: 2.2; dir: alternate; dur: 2000; loop: true"
+          >
+            <a-entity
+              geometry="primitive: sphere"
+              material="color: #FFF; shader: flat"
+              cursor-listener
+              light="type: point; intensity: 1; distance: .1"
+              id="light-bulb-2"
+              scale="0.25 0.25 0.25"
+              position="-0.8 1.6 -.65"
+            ></a-entity>
+          </a-gltf-model>
+
+          <a-gltf-model
+            src="#orb"
+            shader="flat"
+            position="2 1.5 -15"
+            rotation="0 90 -90"
+            scale="1 1 1"
+            animation__position="property: object3D.position.y; from: 1.5; to: 2.2; dir: alternate; dur: 2000; loop: true"
+          >
+            <a-entity
+              geometry="primitive: sphere"
+              material="color: #FFF; shader: flat"
+              cursor-listener
+              light="type: point; intensity: 1; distance: .1"
+              id="light-bulb-3"
+              scale="0.25 0.25 0.25"
+              position="-0.8 1.6 -.65"
+            ></a-entity>
+          </a-gltf-model>
+
+          <a-gltf-model
+            src="#orb"
+            shader="flat"
+            position="6 1.5 -15"
+            rotation="0 90 -90"
+            scale="1 1 1"
+            animation__position="property: object3D.position.y; from: 1.5; to: 2.2; dir: alternate; dur: 2000; loop: true"
+          >
+            <a-entity
+              geometry="primitive: sphere"
+              material="color: #FFF; shader: flat"
+              cursor-listener
+              light="type: point; intensity: 1; distance: .1"
+              id="light-bulb-4"
+              scale="0.25 0.25 0.25"
+              position="-0.8 1.6 -.65"
+            ></a-entity>
+          </a-gltf-model>
+
+          <!-- ARCHWAY -->
+          <a-gltf-model
+            src="#archway"
+            position="-8 -0.2 -21"
+            scale=".5 .5 .5"
+            rotation="0 90 0"
+            material="shader: flat"
+          ></a-gltf-model>
+
+          <!--PROJECT NAME TEXT-->
+          <a-entity
+            text="value:Hey there!\nFeel free to browse\nmy XR projects here.\n-Christian Gutierrez; font: monoid; color: #FAFAFA; width: 3; anchor: align"
+            position="-0.5 1 -3.62"
+            scale="1.5 1.5 1.5"
+            rotation="0 -18 0"
+          ></a-entity>
+
+          <!--GROUND PLANE FOR PHYSICS-->
+          <a-plane
+            scale="200 200 0"
+            color="red"
+            position="0 -0.01 0"
+            rotation="-90 0 0"
+            static-body
+          ></a-plane>
+
+          <!--CAMERA RIG: HEAD AND HANDS-->
+          <a-entity id="cameraRig">
+            <a-camera
+              id="head"
+              camera
+              wasd-controls
+              look-controls
+              position="0 1.6 0"
+            >
+              <a-entity
+                cursor="fuse: true; fuseTimeout: 500"
+                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                position="0 0 -1"
+                material="color: #FAFAFA; shader: flat"
+              ></a-entity>
+            </a-camera>
+            <!-- LEFT HAND -->
+            <a-entity
+              id="left-hand"
+              mixin="hand"
+              oculus-touch-controls="hand: left"
+            >
+              <!-- controller menu -->
+              <a-entity id="controller-menu" opacity="0.8" visible="true">
+                <a-entity
+                  id="menu"
+                  position="0 0.05 -0.05"
+                  rotation="-30 0 0"
+                  scale=".9 .9 .9"
+                >
+                  <a-entity
+                    id="mini-bpe"
+                    class="menu-item clickable"
+                    mixin="menu-item"
+                    text="value: VR Workout Coach; font: monoid; color: #FAFAFA;"
+                    position="0.3 0.05 0"
+                    rotation="0 0 0"
+                    data-target="#bpe-target"
+                    animation__mouseenter="property: color; to: green; dur: 300; startEvents: mouseenter"
+                    animation__mouseleave="property: color; to: #FAFAFA; dur: 300; startEvents: mouseleave"
+                  ></a-entity>
+                  <a-entity
+                    id="mini-hike"
+                    class="menu-item clickable"
+                    mixin="menu-item"
+                    text="value: AR Hiking App; font: monoid; color: #FAFAFA;"
+                    position="0.3 -.25 0"
+                    rotation="0 0 0"
+                    data-target="#hike-target"
+                    animation__mouseenter="property: color; to: green; dur: 300; startEvents: mouseenter"
+                    animation__mouseleave="property: color; to: #FAFAFA; dur: 300; startEvents: mouseleave"
+                  ></a-entity>
+                  <a-entity
+                    id="mini-dbz"
+                    class="menu-item clickable"
+                    mixin="menu-item"
+                    text="value: Dragon Ball XYZ; font: monoid; color: #FAFAFA;"
+                    position="0 -.1 0"
+                    rotation="0 0 0"
+                    data-target="#dbz-target"
+                    animation__mouseenter="property: color; to: green; dur: 300; startEvents: mouseenter"
+                    animation__mouseleave="property: color; to: #FAFAFA; dur: 300; startEvents: mouseleave"
+                  ></a-entity>
+                  <a-entity
+                    id="mini-sleep"
+                    class="menu-item clickable"
+                    mixin="menu-item"
+                    text="value: Sleep Hygiene VR; font: monoid; color: #FAFAFA;"
+                    position=".6 -.1 0"
+                    rotation="0 0 0"
+                    data-target="#sleep-target"
+                    animation__mouseenter="property: color; to: green; dur: 300; startEvents: mouseenter"
+                    animation__mouseleave="property: color; to: #FAFAFA; dur: 300; startEvents: mouseleave"
+                  ></a-entity>
+                </a-entity>
+              </a-entity>
+            </a-entity>
+            <!--<a-entity id="left-hand" raycaster="objects: .clickable; far: 10; lineColor: white; lineOpacity: 0.5" controller-cursor="color: green" mixin="hand" oculus-touch-controls="hand: left"></a-entity>-->
+            <!-- RIGHT HAND -->
+            <a-entity
+              id="right-hand"
+              laser-controls="hand: right"
+              teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; type: parabolic; hitCylinderColor: #bc13fe; curveHitColor: #bc13fe;"
+              mixin="hand"
+              oculus-touch-controls="hand: right"
+              sound="src: #teleport-sound; on: teleported; volume: .01"
+            ></a-entity>
+          </a-entity>
+        </a-scene>
       </div>
-    </footer>
 
+      <!--------------------------SECTION: Companies ----------------------------------->
+      <p class="lower-info">
+        Feel free to
+        <a href="/CFG_Resume.pdf" target="_blank" id="resume-link"
+          >check out my resume</a
+        >
+        for more info. Below is a list of <br />companies that I have done
+        software development work for.
+      </p>
 
+      <div id="company-container">
+        <div class="box a comp_card_single">
+          <div class="card_front">
+            <img
+              id="adobe-logo"
+              class="comp-logo card_image"
+              src="images/Adobe_Logo.png"
+              alt="Adobe Logo"
+            />
+          </div>
+          <div class="card_back">Adobe Project</div>
+        </div>
+        <div class="box d comp_card_single">
+          <div class="card_front">
+            <img
+              id="nasajpl-logo"
+              class="comp-logo card_image"
+              src="images/NASAJPL_Logo_Small.png"
+              alt="NASAJPL Logo"
+            />
+          </div>
+          <div class="card_back">NASA JPL Project</div>
+        </div>
+        <div class="box c comp_card_single">
+          <div class="card_front">
+            <img
+              id="intel-logo"
+              class="comp-logo card_image"
+              src="images/Intel_Logo_Small.png"
+              alt="Intel Logo"
+            />
+          </div>
+          <div class="card_back">Intel Project</div>
+        </div>
+        <div class="box b comp_card_single">
+          <div class="card_front">
+            <img
+              id="qualcomm-logo"
+              class="comp-logo card_image"
+              src="images/Qualcomm_Logo_Small.png"
+              alt="Qualcomm Logo"
+            />
+          </div>
+          <div class="card_back">Qualcomm Project</div>
+        </div>
+        <div class="box e comp_card_single">
+          <div class="card_front">
+            <img
+              id="nanome-logo"
+              class="comp-logo card_image"
+              src="images/Nanome_Logo_Small.png"
+              alt="Nanome Logo"
+            />
+          </div>
+          <div class="card_back">Nanome Project</div>
+        </div>
+        <div class="box f comp_card_single">
+          <div class="card_front">
+            <img
+              id="ccas-logo"
+              class="comp-logo card_image"
+              src="images/CCAS_Logo.png"
+              alt="CCAS Logo"
+            />
+          </div>
+          <div class="card_back">UCCA Project</div>
+        </div>
+      </div>
+    </main>
+    <script src="js/about.js"></script>
+  </body>
+
+  <footer class="lower-info">
+    Copyright 2021&copy Christian Gutierrez<br />
+    <div
+      style="
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+      "
+    >
+      <span style="font-size: 48px; color: ghostwhite"
+        ><a href="mailto:gutierrezchristianf@gmail.com"
+          ><i class="fas fa-envelope-square"></i></a
+      ></span>
+      <span style="font-size: 48px; color: ghostwhite"
+        ><a
+          href="https://www.linkedin.com/in/christianfgutierrez"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i></a
+      ></span>
+    </div>
+  </footer>
 </html>
