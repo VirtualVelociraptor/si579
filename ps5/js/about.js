@@ -47,13 +47,13 @@ function flipCard() {
 
 function flipCompCardEnter() {
     this.classList.toggle("flip");
-    this.style.backgroundColor = "#990000";
-    this.style.color = "white";
+    this.style.backgroundColor = "ghostwhite";
+    this.style.color = "black";
   }
 
   function flipCompCardLeave() {
     this.classList.toggle("flip");
-    this.style.backgroundColor = "white";
+    this.style.backgroundColor = "ghostwhite";
   }
 
 
