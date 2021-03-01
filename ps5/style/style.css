@@ -126,7 +126,7 @@ margin-bottom: 50px;
     right: 0;
     left: 0;
     top: 10px;
-    color: whitesmoke;
+    color: black;
   }
 
   .card_single {
@@ -191,7 +191,7 @@ margin-bottom: 50px;
 
 .box {
   background-color:white;
-  color: #fff;
+  color: black;
   border-radius: 20px;
   padding: 20px;
   font-size: 150%;
