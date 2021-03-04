@@ -28,8 +28,8 @@
     <link rel="shortcut icon" type="image/png" href="img/vv_icon.png" />
     <link rel="stylesheet" href="style/style.css" />
 
-    <!--FONT AWESOME-->
-    
+    <!--Webpack-->
+    <script src='./node_modules/aframe/dist/aframe.js'></script>
 
     <!---------3rd Party JS Libraries ---------->
         <script src="https://kit.fontawesome.com/28511594f3.js" crossorigin="anonymous"></script>
@@ -49,14 +49,14 @@
         <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
         <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
 
-        <script src="js/play-on-click.js" defer></script>
-        <script src="js/controller-menu.js" defer></script>
+        <script src="src/play-on-click.js" defer></script>
+        <script src="src/controller-menu.js" defer></script>
   </head>
 
   <body>
     <!--------------------------SECTION: external THREE.js library ----------------------------------->
     <section id="cube-3js">
-      <script src="js/three.js"></script>
+      <script src="src/three.js"></script>
       <script>
         // Our Javascript will go here.
         const scene = new THREE.Scene();
@@ -180,8 +180,8 @@
       <script src="//unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
       <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
       <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
-      <script src="js/play-on-click.js" defer></script>
-      <script src="js/controller-menu.js" defer></script>
+      <script src="src/play-on-click.js" defer></script>
+      <script src="src/controller-menu.js" defer></script>
       -->
       <style>
         #aFrameScene {
@@ -1026,7 +1026,8 @@
         </div>
       </div>
     </main>
-    <script src="js/index.js"></script>
+    <script src="src/index.js"></script>
+    <script src="main.js"></script>
   </body>
 
   <footer class="lower-info">
