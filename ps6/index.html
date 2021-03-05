@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="style/style.css" />
 
     <!--Webpack-->
-    <script src='./node_modules/aframe/dist/aframe.js'></script>
+    <!-- <script src='./node_modules/aframe/dist/aframe.js'></script> -->
 
     <!---------3rd Party JS Libraries ---------->
         <script src="https://kit.fontawesome.com/28511594f3.js" crossorigin="anonymous"></script>
@@ -57,34 +57,7 @@
     <!--------------------------SECTION: external THREE.js library ----------------------------------->
     <section id="cube-3js">
       <script src="src/three.js"></script>
-      <script>
-        // Our Javascript will go here.
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(
-          75,
-          window.innerWidth / window.innerHeight,
-          0.1,
-          1000
-        );
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
-        document.body.appendChild(renderer.domElement);
 
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0x990000 });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
-
-        camera.position.z = 2;
-
-        function animate() {
-          requestAnimationFrame(animate);
-          cube.rotation.x += 0.01;
-          cube.rotation.y += 0.01;
-          renderer.render(scene, camera);
-        }
-        animate();
-      </script>
     </section>
 
     <div>
@@ -155,7 +128,7 @@
         </div>
       </div>
 
-      <!-------------------------- A-FRAME EXTERNAL API --------------------->
+      <!-------------------------- A-FRAME Section Header --------------------->
       <h3 class="lower-info">
         Immersive gallery featuring some of my XR Projects<br />
         On desktop: Use the WASD keys to move and the mouse to look around.<br />
@@ -195,54 +168,16 @@
         <!-- REMEMBER TO ADD 'embedded' KEYWORD TO A-SCENE TAG-->
 
         <a-scene environment="preset: tron; shadow: true" physics embedded>
-          <!-- SOURCE: SUPER HANDS -->
-          <script>
-            // turn controller's physics presence on only while button held down
-            AFRAME.registerComponent("phase-shift", {
-              init: function () {
-                console.warn("installing phase shift");
-                var el = this.el;
-                el.addEventListener("gripdown", function () {
-                  el.setAttribute("collision-filter", {
-                    collisionForces: true,
-                  });
-                });
-                el.addEventListener("gripup", function () {
-                  el.setAttribute("collision-filter", {
-                    collisionForces: false,
-                  });
-                });
-              },
-            });
-          </script>
-
-          <script>
-            // Component to change to a sequential color on click.
-            AFRAME.registerComponent("cursor-listener", {
-              init: function () {
-                var lastIndex = -1;
-                var COLORS = ["red", "green", "blue", "white"];
-                this.el.addEventListener("fusing", function (evt) {
-                  lastIndex = (lastIndex + 1) % COLORS.length;
-                  this.setAttribute("material", "color", COLORS[lastIndex]);
-                  console.log(
-                    "I was clicked at: ",
-                    evt.detail.intersection.point
-                  );
-                });
-              },
-            });
-          </script>
 
           <!--PROJECT ASSETS-->
           <a-assets>
-            <!-- SOUNDS -->
+            <!-- SOUNDS 
             <audio
               id="teleport-sound"
               src="//cdn.rawgit.com/michaelnebeling/src/master/button-4.mp3"
               crossorigin="anonymous"
             ></audio>
-            <!--Blade Runner Ambient Effect Source: https://freesound.org/people/onderwish/sounds/416070/
+            Blade Runner Ambient Effect Source: https://freesound.org/people/onderwish/sounds/416070/
             <audio
               id="future-ambient"
               src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2Fblade_runner_ambient.mp3?v=1614323183996"
@@ -940,8 +875,9 @@
               teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: trigger; type: parabolic; hitCylinderColor: #bc13fe; curveHitColor: #bc13fe;"
               mixin="hand"
               oculus-touch-controls="hand: right"
-              sound="src: #teleport-sound; on: teleported; volume: .01"
+              
             ></a-entity>
+            <!--sound="src: #teleport-sound; on: teleported; volume: .01"-->
           </a-entity>
         </a-scene>
       </div>
@@ -1027,6 +963,7 @@
     </main>
     
     <script src="dist/main.js"></script>
+    <!-- <script src="src/index.js"></script> -->
   </body>
 
   <footer class="lower-info">

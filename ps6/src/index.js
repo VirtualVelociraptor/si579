@@ -22,8 +22,8 @@
 // <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
 // <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script> 
 
-import * as aframe from 'aframe';
-require('aframe');
+import aframe from 'aframe';
+//require('aframe');
 
 const cards = document.querySelectorAll(".card_single");
 const compcards = document.querySelectorAll(".comp_card_single");
@@ -61,6 +61,72 @@ function flipCompCardEnter() {
     this.classList.toggle("flip");
     this.style.backgroundColor = "white";
   }
+
+////////////////////////////////////
+// SOURCE: SUPER HANDS 
+
+  // turn controller's physics presence on only while button held down
+  aframe.registerComponent("phase-shift", {
+    init: function () {
+      console.warn("installing phase shift");
+      var el = this.el;
+      el.addEventListener("gripdown", function () {
+        el.setAttribute("collision-filter", {
+          collisionForces: true,
+        });
+      });
+      el.addEventListener("gripup", function () {
+        el.setAttribute("collision-filter", {
+          collisionForces: false,
+        });
+      });
+    },
+  });
+
+
+
+  // Component to change to a sequential color on click.
+  aframe.registerComponent("cursor-listener", {
+    init: function () {
+      var lastIndex = -1;
+      var COLORS = ["red", "green", "blue", "white"];
+      this.el.addEventListener("fusing", function (evt) {
+        lastIndex = (lastIndex + 1) % COLORS.length;
+        this.setAttribute("material", "color", COLORS[lastIndex]);
+        console.log(
+          "I was clicked at: ",
+          evt.detail.intersection.point
+        );
+      });
+    },
+  });
+
+  //////////////////// THREE JS ///////////////////////////
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+  );
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+  document.body.appendChild(renderer.domElement);
+
+  const geometry = new THREE.BoxGeometry();
+  const material = new THREE.MeshBasicMaterial({ color: 0x990000 });
+  const cube = new THREE.Mesh(geometry, material);
+  scene.add(cube);
+
+  camera.position.z = 2;
+
+  function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    renderer.render(scene, camera);
+  }
+  animate();
 
 
 
