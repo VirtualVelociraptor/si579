@@ -34,7 +34,7 @@
     <!---------3rd Party JS Libraries ---------->
         <script src="https://kit.fontawesome.com/28511594f3.js" crossorigin="anonymous"></script>
 
-        <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+        <!--<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 
         <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
         <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>         
@@ -50,7 +50,7 @@
         <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
 
         <script src="src/play-on-click.js" defer></script>
-        <script src="src/controller-menu.js" defer></script>
+        <script src="src/controller-menu.js" defer></script>-->
   </head>
 
   <body>
@@ -269,7 +269,7 @@
             <video
               id="dbz-video"
               preload="auto"
-              autoplay
+              
               loop="false"
               src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FDragon%20Ball%20XYZ%20short.mp4?v=1614444427535"
               crossorigin="anonymous"
@@ -278,7 +278,7 @@
             <video
               id="sleep-video"
               preload="auto"
-              autoplay
+              
               loop="false"
               src="https://cdn.glitch.com/8df12c73-b111-4f48-bd1f-f0cb83387d79%2FSleep%20Hygiene%20VR.mp4?v=1614445809369"
               crossorigin="anonymous"
@@ -446,7 +446,6 @@
             shader="flat"
             position="0 .01 0"
             scale="1 .01 1"
-            sound="src: #future-ambient; autoplay: true; loop: true; volume: .5"
           ></a-cylinder>
 
           <!-- FLYING BOXES -->
@@ -1026,8 +1025,8 @@
         </div>
       </div>
     </main>
-    <script src="src/index.js"></script>
-    <script src="main.js"></script>
+    
+    <script src="dist/main.js"></script>
   </body>
 
   <footer class="lower-info">

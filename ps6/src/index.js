@@ -22,7 +22,8 @@
 // <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
 // <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script> 
 
-import _ from 'aframe'
+import * as aframe from 'aframe';
+require('aframe');
 
 const cards = document.querySelectorAll(".card_single");
 const compcards = document.querySelectorAll(".comp_card_single");
