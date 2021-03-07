@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aframe": "^1.2.0"
+    "aframe": "^1.1.0"
   }
 }

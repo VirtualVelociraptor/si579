@@ -66,7 +66,7 @@ function flipCompCardEnter() {
 // SOURCE: A-FRAME SUPER HANDS 
 
 // turn controller's physics presence on only while button held down
-AFRAME.registerComponent("phase-shift", {
+aframe.registerComponent("phase-shift", {
   init: function () {
     console.warn("installing phase shift");
     var el = this.el;
@@ -84,7 +84,7 @@ AFRAME.registerComponent("phase-shift", {
 });
 
 // Component to change to a sequential color on click.
-AFRAME.registerComponent("cursor-listener", {
+aframe.registerComponent("cursor-listener", {
   init: function () {
     var lastIndex = -1;
     var COLORS = ["red", "green", "blue", "white"];
