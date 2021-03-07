@@ -47,17 +47,47 @@
         <script src="https://unpkg.com/aframe-controller-cursor-component@0.2.7/dist/aframe-controller-cursor-component.min.js"></script>      
         <script src="//unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
         <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
-        <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+        <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>-->
 
+        <script src="dist/main.js" defer></script>
+        <script src="src/index.js" defer></script>
         <script src="src/play-on-click.js" defer></script>
-        <script src="src/controller-menu.js" defer></script>-->
+        <script src="src/controller-menu.js" defer></script>
   </head>
 
   <body>
     <!--------------------------SECTION: external THREE.js library ----------------------------------->
     <section id="cube-3js">
       <script src="src/three.js"></script>
+      
+      <script>
+        //////////////////// THREE JS ///////////////////////////
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(
+          75,
+          window.innerWidth / window.innerHeight,
+          0.1,
+          1000
+        );
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+        document.body.appendChild(renderer.domElement);
 
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial({ color: 0x990000 });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        camera.position.z = 2;
+
+        function animate() {
+          requestAnimationFrame(animate);
+          cube.rotation.x += 0.01;
+          cube.rotation.y += 0.01;
+          renderer.render(scene, camera);
+        }
+        animate();
+      </script>
     </section>
 
     <div>
@@ -128,34 +158,14 @@
         </div>
       </div>
 
-      <!-------------------------- A-FRAME Section Header --------------------->
+      <!------------------------------- A-FRAME Section Header ------------------------->
       <h3 class="lower-info">
         Immersive gallery featuring some of my XR Projects<br />
         On desktop: Use the WASD keys to move and the mouse to look around.<br />
         (Best experienced with a VR headset)
       </h3>
 
-      <!----------------------------------- FEATURED PROJECT -------------------------------------------->
-      <!---------3rd Party JS Libraries---------->
-      <!--
-      <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-      <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
-      <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
-
-      <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.1.2/dist/aframe-physics-system.min.js"></script>
-      <script src="https://unpkg.com/aframe-physics-extras/dist/aframe-physics-extras.min.js"></script>
-      <script src="https://unpkg.com/aframe-event-set-component@4.0.1/dist/aframe-event-set-component.min.js"></script>
-      <script src="https://unpkg.com/aframe-layout-component/dist/aframe-layout-component.min.js"></script>
-      <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
-      <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
-      <script src="https://unpkg.com/aframe-controller-cursor-component@0.2.7/dist/aframe-controller-cursor-component.min.js"></script>
-
-      <script src="//unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-      <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
-      <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
-      <script src="src/play-on-click.js" defer></script>
-      <script src="src/controller-menu.js" defer></script>
-      -->
+      <!----------------- FEATURED PROJECT ------------------->
       <style>
         #aFrameScene {
           width: 1200px;
@@ -165,8 +175,8 @@
         }
       </style>
       <div id="aFrameScene">
-        <!-- REMEMBER TO ADD 'embedded' KEYWORD TO A-SCENE TAG-->
 
+        <!-- REMEMBER TO ADD 'embedded' KEYWORD TO A-SCENE TAG-->
         <a-scene environment="preset: tron; shadow: true" physics embedded>
 
           <!--PROJECT ASSETS-->
@@ -961,9 +971,6 @@
         </div>
       </div>
     </main>
-    
-    <script src="dist/main.js"></script>
-    <script src="src/index.js"></script>
   </body>
 
   <footer class="lower-info">
